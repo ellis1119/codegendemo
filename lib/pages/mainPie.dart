@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/indicator.dart';
 
 class mainPie extends StatefulWidget {
-  const mainPie({super.key});
+  const mainPie({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => mainPieState();
