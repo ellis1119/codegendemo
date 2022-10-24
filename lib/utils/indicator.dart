@@ -21,7 +21,7 @@ class Indicator extends StatelessWidget {
     return Row(
       children: <Widget>[
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 8.0),
+          margin: const EdgeInsets.symmetric(horizontal: 2.0),
           width: size,
           height: size,
           decoration: BoxDecoration(

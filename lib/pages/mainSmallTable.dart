@@ -58,14 +58,16 @@ class _MainSmallTableState extends State<MainSmallTable> {
     double width = (MediaQuery.of(context).size.width - 250) * 0.5;
     double width2 = MediaQuery.of(context).size.width - 55;
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
     return Card(
         elevation: 1,
         color: Colors.transparent,
         child: Scrollbar(
+            child: SingleChildScrollView(
+          controller: _verScrollerController,
+          scrollDirection: Axis.vertical,
           child: SingleChildScrollView(
-              controller: _verScrollerController,
-              scrollDirection: Axis.vertical,
+              controller: _horScrollerController,
+              scrollDirection: Axis.horizontal,
               child: Theme(
                   data: Theme.of(context).copyWith(
                       dividerColor: const Color.fromRGBO(240, 248, 255, 1)),
@@ -170,7 +172,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
                         ),
                     ],
                   )))),
-        ));
+        )));
   }
 }
 
