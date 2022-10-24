@@ -64,12 +64,10 @@ class _Demo2State extends State<Demo2> {
           elevation: 0,
           title: const Text(
             '菜单二',
-            style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          backgroundColor:  Color.fromRGBO(66, 66, 74, 1.0),
+          backgroundColor: Color.fromRGBO(66, 66, 74, 1.0),
         ),
         backgroundColor: Colors.transparent,
         body: Container(
@@ -98,7 +96,7 @@ class _Demo2State extends State<Demo2> {
                                 elevation: MaterialStateProperty.all(1.0),
                                 padding: MaterialStateProperty.all(
                                     const EdgeInsets.symmetric(
-                                        horizontal: 30, vertical: 15)),
+                                        horizontal: 29, vertical: 15)),
                                 backgroundColor:
                                     MaterialStateProperty.all(Colors.cyan),
                                 shape: MaterialStateProperty.all(
@@ -112,12 +110,22 @@ class _Demo2State extends State<Demo2> {
                                 color: Colors.white,
                                 size: 16.0,
                               ),
-                              label: const Text(
-                                '生成代码',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(240, 248, 255, 1),
-                                    fontWeight: FontWeight.bold),
-                              ),
+                              label: width > 1000
+                                  ? const Text(
+                                      '生成代码',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(240, 248, 255, 1),
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  : const Text(
+                                      '生成代码',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(240, 248, 255, 1),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 11.0),
+                                    ),
                               onPressed: () {},
                             ),
                           )),
