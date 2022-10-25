@@ -46,7 +46,7 @@ class mainPieState extends State {
                     ),
                     sectionsSpace: 0,
                     centerSpaceRadius:
-                        width < 1000 ? width * 0.13 : width * 0.04,
+                        width < 1000 ? width * 0.13 : width * 0.03,
                     sections: showingSections(),
                   ),
                 ),

@@ -24,8 +24,8 @@ class _MainListState extends State<MainList> {
                 return Column(
                   children: [
                     ListTile(
-                      contentPadding: EdgeInsets.symmetric(
-                        horizontal: screenWidth * 0.02,
+                      contentPadding: const EdgeInsets.symmetric(
+                      //  horizontal: screenWidth * 0.02,
                       ),
                       leading: AspectRatio(
                         aspectRatio: 9 / 10,
@@ -39,7 +39,7 @@ class _MainListState extends State<MainList> {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               listData[index]['name'],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                           ),
@@ -48,7 +48,7 @@ class _MainListState extends State<MainList> {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               listData[index]['body'],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.black,
                                   fontSize: 14,
                                   letterSpacing: .3),

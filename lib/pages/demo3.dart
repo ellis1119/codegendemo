@@ -42,13 +42,16 @@ class _Demo3State extends State<Demo3> {
     print(width);
     return Scaffold(
         appBar: AppBar(
-          elevation: 0,
+          elevation: 2,
           title: const Text(
             '菜单一',
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black),
           ),
           centerTitle: true,
-          backgroundColor: const Color.fromRGBO(66, 66, 74, 1.0),
+          backgroundColor: Colors.white,
         ),
         backgroundColor: Colors.transparent,
         body: Container(
@@ -282,12 +285,12 @@ class _Demo3State extends State<Demo3> {
                           ),
                         ),
                       if (width <= 1000)
-                        Container(
-                          margin: EdgeInsets.symmetric(vertical: height * 0.02),
-                          child: Wrap(
-                            direction: Axis.horizontal,
-                            children: <Widget>[
-                              Card(
+                        Wrap(
+                          direction: Axis.horizontal,
+                          children: <Widget>[
+                            Container(
+                              margin: const EdgeInsets.only(bottom: 8.0),
+                              child: Card(
                                   elevation: 1,
                                   shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
@@ -310,36 +313,38 @@ class _Demo3State extends State<Demo3> {
                                       subtitle: MainGraph(),
                                     ),
                                   )),
-                              Card(
-                                  elevation: 1,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(10.0),
+                            ),
+                            Container(
+                                margin: const EdgeInsets.only(bottom: 8.0),
+                                child: Card(
+                                    elevation: 1,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0),
+                                      ),
                                     ),
-                                  ),
-                                  clipBehavior: Clip.antiAlias,
-                                  semanticContainer: false,
-                                  child: Container(
-                                    height: 600.0,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15.0, vertical: 20.0),
-                                    child: ListTile(
-                                        title: const Text(
-                                          "饼图一",
-                                          style: TextStyle(
-                                              fontSize: 20.0,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        subtitle: Center(
-                                          child: Container(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      vertical: 50.0),
-                                              child: const mainPie()),
-                                        )),
-                                  ))
-                            ],
-                          ),
+                                    clipBehavior: Clip.antiAlias,
+                                    semanticContainer: false,
+                                    child: Container(
+                                      height: 600.0,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 15.0, vertical: 20.0),
+                                      child: ListTile(
+                                          title: const Text(
+                                            "饼图一",
+                                            style: TextStyle(
+                                                fontSize: 20.0,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          subtitle: Center(
+                                            child: Container(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 50.0),
+                                                child: const mainPie()),
+                                          )),
+                                    ))),
+                          ],
                         ),
                       if (width > 1000)
                         SizedBox(
@@ -427,7 +432,7 @@ class _Demo3State extends State<Demo3> {
                               Expanded(
                                 flex: 1,
                                 child: Container(
-                                  margin: const EdgeInsets.only(right: 6.0),
+                                  margin: const EdgeInsets.only(bottom: 8.0),
                                   child: Card(
                                       elevation: 1,
                                       shape: const RoundedRectangleBorder(
@@ -461,7 +466,7 @@ class _Demo3State extends State<Demo3> {
                               Expanded(
                                 flex: 1,
                                 child: Container(
-                                  margin: const EdgeInsets.only(left: 6.0),
+                                  margin: const EdgeInsets.only(top: 8.0),
                                   child: Card(
                                       elevation: 1,
                                       shape: const RoundedRectangleBorder(

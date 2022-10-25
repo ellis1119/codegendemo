@@ -70,7 +70,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
               scrollDirection: Axis.horizontal,
               child: Theme(
                   data: Theme.of(context).copyWith(
-                      dividerColor: const Color.fromRGBO(240, 248, 255, 1)),
+                      dividerColor: Colors.transparent),
                   child: (DataTable(
                     sortColumnIndex: _sortColumnIndex,
                     sortAscending: _sortAscending,
@@ -97,7 +97,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
                       DataColumn(
                           label: SizedBox(
                               width: screenWidth > 1000
-                                  ? width * 0.22
+                                  ? width * 0.24
                                   : width2 * 0.22,
                               child: const Center(
                                 child: Text('内容',
@@ -107,7 +107,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
                       DataColumn(
                           label: SizedBox(
                               width: screenWidth > 1000
-                                  ? width * 0.18
+                                  ? width * 0.2
                                   : width2 * 0.18,
                               child: const Center(
                                 child: Text('备注',
@@ -117,7 +117,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
                       DataColumn(
                           label: SizedBox(
                               width: screenWidth > 1000
-                                  ? width * 0.18
+                                  ? width * 0.2
                                   : width2 * 0.18,
                               child: const Center(
                                 child: Text('分类',
