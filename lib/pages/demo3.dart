@@ -64,7 +64,7 @@ class _Demo3State extends State<Demo3> {
                     child: Column(children: <Widget>[
                       if (width > 900)
                         SizedBox(
-                          height: 180,
+                          height: 160,
                           child: Flex(
                             direction: Axis.horizontal,
                             children: [
