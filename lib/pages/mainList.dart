@@ -6,14 +6,13 @@ class MainList extends StatefulWidget {
   const MainList({Key? key}) : super(key: key);
 
   @override
-  _MainListState createState() => _MainListState();
+  MainListState createState() => MainListState();
 }
 
-class _MainListState extends State<MainList> {
+class MainListState extends State<MainList> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Expanded(
@@ -24,46 +23,52 @@ class _MainListState extends State<MainList> {
                 return Column(
                   children: [
                     ListTile(
-                      contentPadding: const EdgeInsets.symmetric(
-                      //  horizontal: screenWidth * 0.02,
-                      ),
-                      leading: AspectRatio(
-                        aspectRatio: 9 / 10,
-                        child: Image.asset(listData[index]['head']),
-                      ),
-                      title:Container(
-                        padding: EdgeInsets.symmetric(vertical: screenHeight * 0.006),
-                        child: Column(
-                        children: [
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              listData[index]['name'],
-                              style: const TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w600),
+                        contentPadding: const EdgeInsets.symmetric(
+                            //  horizontal: screenWidth * 0.02,
                             ),
+                        leading: AspectRatio(
+                          aspectRatio: 9 / 10,
+                          child: Image.asset(listData[index]['head']),
+                        ),
+                        title: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: screenHeight * 0.006),
+                          child: Column(
+                            children: [
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  listData[index]['name'],
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(
+                                    vertical: screenHeight * 0.007),
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  listData[index]['body'],
+                                  style: const TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 12,
+                                      letterSpacing: .3),
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  listData[index]['date'] + '    ',
+                                  style: const TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.cyan,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              )
+                            ],
                           ),
-                          Container(
-                            margin: EdgeInsets.symmetric(vertical: screenHeight * 0.007),
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              listData[index]['body'],
-                              style: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  letterSpacing: .3),
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              listData[index]['date'] + '    ',
-                              style: const TextStyle(fontSize: 14.0),
-                            ),
-                          )
-                        ],
-                      ),
-                      )  ),
+                        )),
                   ],
                 );
               }),
@@ -120,7 +125,7 @@ List listData = [
     "head": "images/photo.jpg",
     "date": "2022-07-18",
     "body":
-    "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
+        "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
   },
   {
     "id": 5,
@@ -128,7 +133,7 @@ List listData = [
     "head": "images/photo.jpg",
     "date": "2022-07-18",
     "body":
-    "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
+        "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
   },
   {
     "id": 4,
@@ -136,14 +141,6 @@ List listData = [
     "head": "images/photo.jpg",
     "date": "2022-07-18",
     "body":
-    "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
-  },
-  {
-    "id": 5,
-    "name": "Mike",
-    "head": "images/photo.jpg",
-    "date": "2022-07-18",
-    "body":
-    "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
+        "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
   },
 ];

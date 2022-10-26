@@ -14,10 +14,10 @@ class Demo2 extends StatefulWidget {
   const Demo2({Key? key}) : super(key: key);
 
   @override
-  _Demo2State createState() => _Demo2State();
+  Demo2State createState() => Demo2State();
 }
 
-class _Demo2State extends State<Demo2> {
+class Demo2State extends State<Demo2> {
   final GlobalKey globalKey = GlobalKey();
   late ScrollController _verScrollerController;
   late ScrollController _pverScrollerController;
@@ -25,7 +25,6 @@ class _Demo2State extends State<Demo2> {
   late ScrollController _phorScrollerController;
   late String searchString;
 
-  @override
   void setSearchString(String value) => setState(() {
         searchString = value;
       });
@@ -291,7 +290,9 @@ class _Demo2State extends State<Demo2> {
                                             onSelectChanged: (selected) {
                                               setState(() {
                                                 data[i].selected = selected!;
-                                                print(data[i].title);
+                                                if (kDebugMode) {
+                                                  print(data[i].title);
+                                                }
                                               });
                                             },
                                           ),
@@ -311,10 +312,10 @@ class SearchBar extends StatefulWidget {
   const SearchBar({Key? key}) : super(key: key);
 
   @override
-  _SearchBarState createState() => _SearchBarState();
+  SearchBarState createState() => SearchBarState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class SearchBarState extends State<SearchBar> {
   late TextEditingController _textEditingController;
 
   @override
@@ -380,8 +381,8 @@ class _SearchBarState extends State<SearchBar> {
   }
 }
 
-class listData {
-  listData(this.id, this.title, this.body, this.rmks, this.date,
+class ListData {
+  ListData(this.id, this.title, this.body, this.rmks, this.date,
       {this.selected = false});
 
   int id;
@@ -392,17 +393,17 @@ class listData {
   bool selected;
 }
 
-List<listData> data = [
-  listData(1, '测试标题1', '测试内容1', '测试备注1', DateTime.now()),
-  listData(2, '测试标题2', '测试内容1', '测试备注1', DateTime.now()),
-  listData(3, '测试标题3', '测试内容1', '测试备注1', DateTime.now()),
-  listData(4, '测试标题4', '测试内容1', '测试备注1', DateTime.now()),
-  listData(5, '测试标题5', '测试内容1', '测试备注1', DateTime.now()),
-  listData(6, '测试标题6', '测试内容1', '测试备注1', DateTime.now()),
-  listData(7, '测试标题7', '测试内容1', '测试备注1', DateTime.now()),
-  listData(8, '测试标题8', '测试内容1', '测试备注1', DateTime.now()),
-  listData(9, '测试标题9', '测试内容1', '测试备注1', DateTime.now()),
-  listData(10, '测试标题10', '测试内容1', '测试备注1', DateTime.now()),
-  listData(11, '测试标题11', '测试内容1', '测试备注1', DateTime.now()),
-  listData(12, '测试标题12', '测试内容1', '测试备注1', DateTime.now()),
+List<ListData> data = [
+  ListData(1, '测试标题1', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(2, '测试标题2', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(3, '测试标题3', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(4, '测试标题4', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(5, '测试标题5', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(6, '测试标题6', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(7, '测试标题7', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(8, '测试标题8', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(9, '测试标题9', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(10, '测试标题10', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(11, '测试标题11', '测试内容1', '测试备注1', DateTime.now()),
+  ListData(12, '测试标题12', '测试内容1', '测试备注1', DateTime.now()),
 ];

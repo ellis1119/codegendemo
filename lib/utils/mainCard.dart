@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class mainCard extends StatelessWidget {
-  const mainCard({
+class MainCard extends StatelessWidget {
+  const MainCard({
     Key? key,
     required this.items,
   }) : super(key: key);

@@ -7,7 +7,8 @@ const TextStyle textTitleStyle = TextStyle(
     fontWeight: FontWeight.bold);
 const TextStyle textContentStyle =
     TextStyle(color: Color.fromRGBO(55, 65, 81, 1), fontSize: 14.0);
-
+const TextStyle textContentStyle2 =
+TextStyle(color: Color.fromRGBO(55, 65, 81, 1), fontSize: 14.0 , fontWeight: FontWeight.bold);
 void main() => runApp(const MainSmallTable());
 
 class MainSmallTable extends StatefulWidget {
@@ -79,8 +80,8 @@ class _MainSmallTableState extends State<MainSmallTable> {
                     ),
                     dataRowColor: MaterialStateColor.resolveWith(
                         (states) => const Color.fromRGBO(255, 255, 255, 1)),
-                    headingRowHeight: 60.0,
-                    dataRowHeight: 60.0,
+                    headingRowHeight: 50.0,
+                    dataRowHeight: 50.0,
                     horizontalMargin: 0,
                     columnSpacing: 0,
                     columns: [
@@ -124,17 +125,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
                                     style: textTitleStyle,
                                     textAlign: TextAlign.center),
                               )),
-                          onSort: (int columnIndex, bool ascending) {
-                            setState(() {
-                              _sortColumnIndex = columnIndex;
-                              _sortAscending = ascending;
-                              if (ascending) {
-                                data.sort((a, b) => a.date.compareTo(b.date));
-                              } else {
-                                data.sort((a, b) => b.date.compareTo(a.date));
-                              }
-                            });
-                          }),
+                ),
                     ],
                     rows: [
                       for (int i = 0; i < data.length; i++)
@@ -142,7 +133,7 @@ class _MainSmallTableState extends State<MainSmallTable> {
                           cells: [
                             DataCell(Center(
                               child: Text(data[i].title,
-                                  style: textContentStyle,
+                                  style: textContentStyle2,
                                   textAlign: TextAlign.center),
                             )),
                             DataCell(Center(
@@ -156,17 +147,13 @@ class _MainSmallTableState extends State<MainSmallTable> {
                                   textAlign: TextAlign.center),
                             )),
                             DataCell(Center(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
+                              child:
                                   Icon(
                                     Icons.car_crash,
                                     size: 30.0,
                                     color: Colors.cyan,
                                   )
-                                ],
-                              ),
+
                             )),
                           ],
                         ),
@@ -197,7 +184,4 @@ List<listData> data = [
   listData('测试标题7', '测试内容1', '测试备注1', DateTime.now()),
   listData('测试标题8', '测试内容1', '测试备注1', DateTime.now()),
   listData('测试标题9', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题10', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题11', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题12', '测试内容1', '测试备注1', DateTime.now()),
 ];

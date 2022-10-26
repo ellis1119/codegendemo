@@ -2,14 +2,14 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import '../utils/indicator.dart';
 
-class mainPie extends StatefulWidget {
-  const mainPie({Key? key}) : super(key: key);
+class MainPie extends StatefulWidget {
+  const MainPie({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => mainPieState();
+  State<StatefulWidget> createState() => MainPieState();
 }
 
-class mainPieState extends State {
+class MainPieState extends State {
   int touchedIndex = -1;
 
   @override

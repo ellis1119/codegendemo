@@ -12,10 +12,10 @@ class MainBar extends StatefulWidget {
   const MainBar({Key? key}) : super(key: key);
 
   @override
-  _MainBarState createState() => _MainBarState();
+  MainBarState createState() => MainBarState();
 }
 
-class _MainBarState extends State<MainBar> {
+class MainBarState extends State<MainBar> {
   var _currentIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
@@ -30,7 +30,6 @@ class _MainBarState extends State<MainBar> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: const Color.fromRGBO(249, 250, 252, 1),
         body: Row(children: <Widget>[

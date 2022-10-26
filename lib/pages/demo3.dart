@@ -13,10 +13,10 @@ class Demo3 extends StatefulWidget {
   const Demo3({Key? key}) : super(key: key);
 
   @override
-  _Demo3State createState() => _Demo3State();
+  Demo3State createState() => Demo3State();
 }
 
-class _Demo3State extends State<Demo3> {
+class Demo3State extends State<Demo3> {
   late ScrollController _verScrollerController;
   late ScrollController _verScrollerController2;
 
@@ -39,7 +39,6 @@ class _Demo3State extends State<Demo3> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    print(width);
     return Scaffold(
         appBar: AppBar(
           elevation: 2,
@@ -71,7 +70,7 @@ class _Demo3State extends State<Demo3> {
                               Expanded(
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 15.0),
-                                  child: mainCard(
+                                  child: MainCard(
                                     items: [
                                       MainCardItem(
                                         title: '卡片标题一',
@@ -90,7 +89,7 @@ class _Demo3State extends State<Demo3> {
                               Expanded(
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 15.0),
-                                  child: mainCard(
+                                  child: MainCard(
                                     items: [
                                       MainCardItem(
                                         title: '卡片标题二',
@@ -109,7 +108,7 @@ class _Demo3State extends State<Demo3> {
                               Expanded(
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 15.0),
-                                  child: mainCard(
+                                  child: MainCard(
                                     items: [
                                       MainCardItem(
                                         title: '卡片标题三',
@@ -126,7 +125,7 @@ class _Demo3State extends State<Demo3> {
                                 ),
                               ),
                               Expanded(
-                                child: mainCard(
+                                child: MainCard(
                                   items: [
                                     MainCardItem(
                                       title: '卡片标题四',
@@ -150,7 +149,7 @@ class _Demo3State extends State<Demo3> {
                           children: [
                             Container(
                               margin: const EdgeInsets.only(bottom: 8.0),
-                              child: mainCard(
+                              child: MainCard(
                                 items: [
                                   MainCardItem(
                                     title: '卡片标题一',
@@ -167,7 +166,7 @@ class _Demo3State extends State<Demo3> {
                             ),
                             Container(
                               margin: const EdgeInsets.only(bottom: 8.0),
-                              child: mainCard(
+                              child: MainCard(
                                 items: [
                                   MainCardItem(
                                     title: '卡片标题二',
@@ -184,7 +183,7 @@ class _Demo3State extends State<Demo3> {
                             ),
                             Container(
                               margin: const EdgeInsets.only(bottom: 8.0),
-                              child: mainCard(
+                              child: MainCard(
                                 items: [
                                   MainCardItem(
                                     title: '卡片标题三',
@@ -199,7 +198,7 @@ class _Demo3State extends State<Demo3> {
                                 ],
                               ),
                             ),
-                            mainCard(
+                            MainCard(
                               items: [
                                 MainCardItem(
                                   title: '卡片标题四',
@@ -276,7 +275,7 @@ class _Demo3State extends State<Demo3> {
                                             subtitle: Center(
                                               child: SizedBox(
                                                   height: 250,
-                                                  child: mainPie()),
+                                                  child: MainPie()),
                                             )),
                                       )),
                                 ),
@@ -341,7 +340,7 @@ class _Demo3State extends State<Demo3> {
                                                 padding:
                                                     const EdgeInsets.symmetric(
                                                         vertical: 50.0),
-                                                child: const mainPie()),
+                                                child: const MainPie()),
                                           )),
                                     ))),
                           ],
