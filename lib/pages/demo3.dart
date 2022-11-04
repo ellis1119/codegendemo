@@ -41,7 +41,7 @@ class Demo3State extends State<Demo3> {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
-          elevation: 2,
+          elevation: 0,
           title: const Text(
             '菜单一',
             style: TextStyle(
@@ -78,7 +78,7 @@ class Demo3State extends State<Demo3> {
                                         desc: '测试内容一',
                                         icon: const Icon(
                                           Icons.home_filled,
-                                          size: 50.0,
+                                          size: 40.0,
                                           color: Colors.redAccent,
                                         ),
                                       ),
@@ -97,7 +97,7 @@ class Demo3State extends State<Demo3> {
                                         desc: '测试内容二',
                                         icon: const Icon(
                                           Icons.cloud,
-                                          size: 50.0,
+                                          size: 40.0,
                                           color: Colors.orangeAccent,
                                         ),
                                       ),
@@ -116,7 +116,7 @@ class Demo3State extends State<Demo3> {
                                         desc: '测试内容三',
                                         icon: const Icon(
                                           Icons.import_contacts_sharp,
-                                          size: 50.0,
+                                          size: 40.0,
                                           color: Colors.blueAccent,
                                         ),
                                       ),
@@ -133,7 +133,7 @@ class Demo3State extends State<Demo3> {
                                       desc: '测试内容四',
                                       icon: const Icon(
                                         Icons.chat,
-                                        size: 50.0,
+                                        size: 40.0,
                                         color: Colors.cyan,
                                       ),
                                     ),
@@ -157,7 +157,7 @@ class Demo3State extends State<Demo3> {
                                     desc: '测试内容一',
                                     icon: const Icon(
                                       Icons.home_filled,
-                                      size: 50.0,
+                                      size: 40.0,
                                       color: Colors.redAccent,
                                     ),
                                   ),
@@ -174,7 +174,7 @@ class Demo3State extends State<Demo3> {
                                     desc: '测试内容二',
                                     icon: const Icon(
                                       Icons.cloud,
-                                      size: 50.0,
+                                      size: 40.0,
                                       color: Colors.orangeAccent,
                                     ),
                                   ),
@@ -191,7 +191,7 @@ class Demo3State extends State<Demo3> {
                                     desc: '测试内容三',
                                     icon: const Icon(
                                       Icons.import_contacts_sharp,
-                                      size: 50.0,
+                                      size: 40.0,
                                       color: Colors.blueAccent,
                                     ),
                                   ),
@@ -206,7 +206,7 @@ class Demo3State extends State<Demo3> {
                                   desc: '测试内容四',
                                   icon: const Icon(
                                     Icons.chat,
-                                    size: 50.0,
+                                    size: 40.0,
                                     color: Colors.cyan,
                                   ),
                                 ),

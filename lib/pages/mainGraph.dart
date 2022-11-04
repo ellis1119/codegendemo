@@ -16,7 +16,7 @@ class MainGraph extends StatelessWidget {
             barGroups: barGroups,
             gridData: FlGridData(
                 drawHorizontalLine: true,
-                horizontalInterval: 3,
+                horizontalInterval: 4,
                 drawVerticalLine: true,
                 verticalInterval: 1),
             alignment: BarChartAlignment.spaceAround,
@@ -114,6 +114,7 @@ class MainGraph extends StatelessWidget {
 
   LinearGradient get _barsGradient => const LinearGradient(
         colors: [
+          Colors.blue,
           Colors.lightBlue,
           Colors.cyan,
         ],

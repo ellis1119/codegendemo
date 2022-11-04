@@ -60,7 +60,7 @@ class Demo2State extends State<Demo2> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
-          elevation: 2,
+          elevation: 0,
           title: const Text(
             '菜单二',
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold , color: Colors.black),

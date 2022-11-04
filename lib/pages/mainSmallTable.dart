@@ -7,18 +7,21 @@ const TextStyle textTitleStyle = TextStyle(
     fontWeight: FontWeight.bold);
 const TextStyle textContentStyle =
     TextStyle(color: Color.fromRGBO(55, 65, 81, 1), fontSize: 14.0);
-const TextStyle textContentStyle2 =
-TextStyle(color: Color.fromRGBO(55, 65, 81, 1), fontSize: 14.0 , fontWeight: FontWeight.bold);
+const TextStyle textContentStyle2 = TextStyle(
+    color: Color.fromRGBO(55, 65, 81, 1),
+    fontSize: 14.0,
+    fontWeight: FontWeight.bold);
+
 void main() => runApp(const MainSmallTable());
 
 class MainSmallTable extends StatefulWidget {
   const MainSmallTable({Key? key}) : super(key: key);
 
   @override
-  _MainSmallTableState createState() => _MainSmallTableState();
+  MainSmallTableState createState() => MainSmallTableState();
 }
 
-class _MainSmallTableState extends State<MainSmallTable> {
+class MainSmallTableState extends State<MainSmallTable> {
   final GlobalKey globalKey = GlobalKey();
   late ScrollController _verScrollerController;
   late ScrollController _pverScrollerController;
@@ -26,7 +29,6 @@ class _MainSmallTableState extends State<MainSmallTable> {
   late ScrollController _phorScrollerController;
   late String searchString;
 
-  @override
   void setSearchString(String value) => setState(() {
         searchString = value;
       });
@@ -51,8 +53,8 @@ class _MainSmallTableState extends State<MainSmallTable> {
     super.dispose();
   }
 
-  bool _sortAscending = true;
-  var _sortColumnIndex = 0;
+  final bool _sortAscending = true;
+  final _sortColumnIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -70,8 +72,8 @@ class _MainSmallTableState extends State<MainSmallTable> {
               controller: _horScrollerController,
               scrollDirection: Axis.horizontal,
               child: Theme(
-                  data: Theme.of(context).copyWith(
-                      dividerColor: Colors.transparent),
+                  data: Theme.of(context)
+                      .copyWith(dividerColor: Colors.transparent),
                   child: (DataTable(
                     sortColumnIndex: _sortColumnIndex,
                     sortAscending: _sortAscending,
@@ -116,16 +118,16 @@ class _MainSmallTableState extends State<MainSmallTable> {
                                     textAlign: TextAlign.center),
                               ))),
                       DataColumn(
-                          label: SizedBox(
-                              width: screenWidth > 1000
-                                  ? width * 0.2
-                                  : width2 * 0.18,
-                              child: const Center(
-                                child: Text('分类',
-                                    style: textTitleStyle,
-                                    textAlign: TextAlign.center),
-                              )),
-                ),
+                        label: SizedBox(
+                            width: screenWidth > 1000
+                                ? width * 0.2
+                                : width2 * 0.18,
+                            child: const Center(
+                              child: Text('分类',
+                                  style: textTitleStyle,
+                                  textAlign: TextAlign.center),
+                            )),
+                      ),
                     ],
                     rows: [
                       for (int i = 0; i < data.length; i++)
@@ -146,15 +148,12 @@ class _MainSmallTableState extends State<MainSmallTable> {
                                   style: textContentStyle,
                                   textAlign: TextAlign.center),
                             )),
-                            DataCell(Center(
-                              child:
-                                  Icon(
-                                    Icons.car_crash,
-                                    size: 30.0,
-                                    color: Colors.cyan,
-                                  )
-
-                            )),
+                            const DataCell(Center(
+                                child: Icon(
+                              Icons.file_copy_outlined,
+                              size: 30.0,
+                              color: Colors.lightBlue,
+                            ))),
                           ],
                         ),
                     ],
@@ -163,8 +162,8 @@ class _MainSmallTableState extends State<MainSmallTable> {
   }
 }
 
-class listData {
-  listData(this.title, this.body, this.rmks, this.date,
+class ListData {
+  ListData(this.title, this.body, this.rmks, this.date,
       {this.selected = false});
 
   String title;
@@ -174,14 +173,14 @@ class listData {
   bool selected;
 }
 
-List<listData> data = [
-  listData('测试标题1', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题2', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题3', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题4', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题5', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题6', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题7', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题8', '测试内容1', '测试备注1', DateTime.now()),
-  listData('测试标题9', '测试内容1', '测试备注1', DateTime.now()),
+List<ListData> data = [
+  ListData('测试标题1', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题2', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题3', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题4', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题5', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题6', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题7', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题8', '测试内容1', '测试备注1', DateTime.now()),
+  ListData('测试标题9', '测试内容1', '测试备注1', DateTime.now()),
 ];

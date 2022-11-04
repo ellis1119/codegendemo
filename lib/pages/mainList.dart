@@ -62,7 +62,7 @@ class MainListState extends State<MainList> {
                                   listData[index]['date'] + '    ',
                                   style: const TextStyle(
                                       fontSize: 12.0,
-                                      color: Colors.cyan,
+                                      color: Colors.grey,
                                       fontWeight: FontWeight.bold),
                                 ),
                               )
