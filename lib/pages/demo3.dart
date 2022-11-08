@@ -241,8 +241,10 @@ class Demo3State extends State<Demo3> {
                                             title: Text(
                                               "柱状图一",
                                               style: TextStyle(
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             subtitle: MainGraph(),
                                           ),
@@ -269,8 +271,10 @@ class Demo3State extends State<Demo3> {
                                             title: Text(
                                               "饼图一",
                                               style: TextStyle(
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             subtitle: Center(
                                               child: SizedBox(
@@ -306,8 +310,10 @@ class Demo3State extends State<Demo3> {
                                       title: Text(
                                         "柱状图一",
                                         style: TextStyle(
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold),
+                                          fontSize: 18,
+                                          color: Colors.black87,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                       subtitle: MainGraph(),
                                     ),
@@ -332,8 +338,10 @@ class Demo3State extends State<Demo3> {
                                           title: const Text(
                                             "饼图一",
                                             style: TextStyle(
-                                                fontSize: 20.0,
-                                                fontWeight: FontWeight.bold),
+                                              fontSize: 18,
+                                              color: Colors.black87,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                           subtitle: Center(
                                             child: Container(
@@ -371,8 +379,10 @@ class Demo3State extends State<Demo3> {
                                             title: const Text(
                                               "列表一",
                                               style: TextStyle(
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             subtitle: Center(
                                               child: Container(
@@ -405,8 +415,10 @@ class Demo3State extends State<Demo3> {
                                             title: const Text(
                                               "表格一",
                                               style: TextStyle(
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             subtitle: Center(
                                               child: Container(
@@ -448,8 +460,10 @@ class Demo3State extends State<Demo3> {
                                             title: const Text(
                                               "列表一",
                                               style: TextStyle(
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             subtitle: Center(
                                               child: Container(
@@ -482,8 +496,10 @@ class Demo3State extends State<Demo3> {
                                             title: const Text(
                                               "表格一",
                                               style: TextStyle(
-                                                  fontSize: 20.0,
-                                                  fontWeight: FontWeight.bold),
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                             subtitle: Center(
                                               child: Container(
