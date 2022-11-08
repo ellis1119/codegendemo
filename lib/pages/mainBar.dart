@@ -3,6 +3,7 @@ import '../utils/bar.dart';
 import '../utils/smallBar.dart';
 import 'demo2.dart';
 import 'demo3.dart';
+import 'demo4.dart';
 
 void main() {
   runApp(const MainBar());
@@ -21,7 +22,7 @@ class MainBarState extends State<MainBar> {
   static final List<Widget> _widgetOptions = <Widget>[
     const Demo3(),
     const Demo2(),
-    const Demo3(),
+    const Demo4(),
     const Demo3(),
     const Demo3(),
     const Demo3()
