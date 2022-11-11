@@ -1,3 +1,4 @@
+import 'package:codegensystem/pages/fieldList.dart';
 import 'package:flutter/material.dart';
 
 class InputConfig extends StatefulWidget {
@@ -267,12 +268,9 @@ class InputConfigState extends State<InputConfig> {
                                 ))),
                       ],
                     ),
-                    /*   FormButton(
-                      text: "注册",
-                      onPressed: submit,
-                    ),*/
+                    const FieldList()
                   ],
-                )
+                ),
               ]);
             }));
   }
@@ -290,14 +288,53 @@ class ImpButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            Color.fromRGBO(66, 66, 74, 1.0),
-            Color.fromRGBO(41, 50, 60, 1),
+            Color.fromRGBO(66, 66, 74, 0.9),
+            Color.fromRGBO(41, 50, 60, 0.9),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        // Round the DecoratedBox to match ElevatedButton
         borderRadius: BorderRadius.circular(5),
+      ),
+      child: ElevatedButton(
+        onPressed: onPressed as void Function()?,
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          primary: Colors.transparent,
+          padding: const EdgeInsets.symmetric(vertical: 18.0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+              fontSize: 13, color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}
+
+class IncButton extends StatelessWidget {
+  final String text;
+  final Function? onPressed;
+
+  const IncButton({this.text = "", this.onPressed, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            Color.fromRGBO(66, 66, 74, 0.9),
+            Color.fromRGBO(41, 50, 60, 0.9),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: ElevatedButton(
         onPressed: onPressed as void Function()?,
