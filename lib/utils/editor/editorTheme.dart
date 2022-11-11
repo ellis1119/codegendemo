@@ -2,34 +2,32 @@ import 'package:flutter/material.dart';
 
 const FontWeight fontWeight = FontWeight.w400;
 
-const Color tagColor = Color(0xFFF79AA5); // tag
-const Color quoteColor = Color(0xFF6CD07A); // ""
+const Color tagColor = Colors.pinkAccent;
+const Color quoteColor = Colors.greenAccent;
+const Color attrColor = Colors.amberAccent;
+const Color propertyColor = Colors.lightBlueAccent;
+const Color idColor = Colors.amber;
+const Color classColor = Colors.yellowAccent;
 
-const Color attrColor = Color(0xFFCBBA7D); // CSS selectors
-const Color propertyColor = Color(0xFF8CDCFE); // property
-const Color idColor = Color(0xFFCBBA7D);
-const Color classColor = Color(0xFFCBBA7D);
-
-const Color keywordColor = Color(0xFF3E9CD6); // keywords (function, ...)
-const Color methodsColor = Color(0xFFDCDC9D); // methods built in
-const Color titlesColor = Color(0xFFDCDC9D); // titles (function's title)
-
+const Color keywordColor = Colors.lightBlueAccent;
+const Color methodsColor = Colors.amber;
+const Color titlesColor = Colors.amber;
 
 const myTheme = {
   'root': TextStyle(
-    backgroundColor:Colors.transparent,
+    backgroundColor: Colors.transparent,
     color: Colors.white,
   ),
   'keyword': TextStyle(color: keywordColor),
-  'params': TextStyle(color: Color(0xffde935f)),
+  'params': TextStyle(color: Colors.cyan),
   'selector-tag': TextStyle(color: attrColor),
   'selector-id': TextStyle(color: idColor),
   'selector-class': TextStyle(color: classColor),
-  'regexp': TextStyle(color: Color(0xffcc6666)),
+  'regexp': TextStyle(color: Colors.redAccent),
   'literal': TextStyle(color: Colors.white),
   'section': TextStyle(color: Colors.white),
   'link': TextStyle(color: Colors.white),
-  'subst': TextStyle(color: Color(0xffdddddd)),
+  'subst': TextStyle(color: Colors.cyan),
   'string': TextStyle(color: quoteColor),
   'title': TextStyle(color: titlesColor),
   'name': TextStyle(color: tagColor),
@@ -42,9 +40,9 @@ const myTheme = {
   'variable': TextStyle(color: tagColor),
   'template-tag': TextStyle(color: tagColor),
   'template-variable': TextStyle(color: tagColor),
-  'comment': TextStyle(color: Color(0xff777777)),
-  'quote': TextStyle(color: Color(0xff777777)),
-  'deletion': TextStyle(color: Color(0xff777777)),
-  'meta': TextStyle(color: Color(0xff777777)),
+  'comment': TextStyle(color: Colors.grey),
+  'quote': TextStyle(color: Colors.grey),
+  'deletion': TextStyle(color: Colors.grey),
+  'meta': TextStyle(color: Colors.grey),
   'emphasis': TextStyle(fontStyle: FontStyle.italic),
 };

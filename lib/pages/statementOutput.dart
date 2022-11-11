@@ -34,24 +34,23 @@ class StatementOutputState extends State<StatementOutput> {
       "SELECT Websites.name, access_log.count, access_log.dat",
       "FROM Websites FULL OUTER",
       "JOIN access_log ON Websites.id=access_log.site_id",
-      "ORDER BY access_log.count DESC",
-      "<div>"
+      "ORDER BY access_log.count DESC"
     ];
 
     List<EditorFile> files = [
       EditorFile(
         name: "生成语句1",
-        language: "html",
-        code: contentOfPage1.join("\n"), // [code] needs a string
+        language: "SQL",
+        code: contentOfPage1.join("\n"),
       ),
       EditorFile(
         name: "生成语句2",
-        language: "html",
+        language: "SQL",
         code: contentOfPage1.join("\n"),
       ),
       EditorFile(
         name: "生成语句3",
-        language: "css",
+        language: "SQL",
         code: contentOfPage1.join("\n"),
       ),
     ];
@@ -59,11 +58,11 @@ class StatementOutputState extends State<StatementOutput> {
     EditorModel model = EditorModel(
       files: files,
       styleOptions: EditorStyle(
-        fontSize: 13,
+        fontSize: 14,
       ),
     );
 
-    final dController = TextEditingController();
+    final dController = TextEditingController(text: 'text');
 
     return Scaffold(
       backgroundColor: Colors.transparent,

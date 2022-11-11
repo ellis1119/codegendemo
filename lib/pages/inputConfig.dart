@@ -136,7 +136,7 @@ class InputConfigState extends State<InputConfig> {
                                             horizontal: screenWidth * 0.005,
                                             vertical: screenHeight * 0.01),
                                         child: ImpButton(
-                                          text: "导入建表SQL",
+                                          text: "导入SQL",
                                           onPressed: submit,
                                         ),
                                       ),

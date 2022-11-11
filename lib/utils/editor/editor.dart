@@ -1,24 +1,20 @@
+import 'package:codegensystem/utils/editor/editorButton.dart';
+import 'package:codegensystem/utils/editor/editorFile.dart';
+import 'package:codegensystem/utils/editor/editorModel.dart';
+import 'package:codegensystem/utils/editor/editorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/github.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'editorButton.dart';
-import 'editorFile.dart';
-import 'editorModel.dart';
-import 'editorStyle.dart';
-
 class Editor extends StatefulWidget {
   EditorModel? model;
   final Function(String? language, String? value)? onSubmit;
-
   final bool edit;
-
   final bool disableNavigationbar;
-
   final TextEditingController? textEditingController;
 
-   Editor({
+  Editor({
     Key? key,
     this.model,
     this.onSubmit,
@@ -33,19 +29,19 @@ class Editor extends StatefulWidget {
 
 class EditorState extends State<Editor> {
   late TextEditingController editingController;
-
   String? newValue;
-
   FocusNode focusNode = FocusNode();
-
   static final GlobalKey<FormState> editableTextKey = GlobalKey<FormState>();
+  late ScrollController _pverScrollerController;
+  late ScrollController _cverScrollerController;
 
   @override
   void initState() {
     super.initState();
+    _pverScrollerController = ScrollController();
+    _cverScrollerController = ScrollController();
 
     if (widget.textEditingController != null) {
-      // Use the user-provide controller
       editingController = widget.textEditingController!;
     } else {
       editingController = TextEditingController(text: "");
@@ -55,6 +51,8 @@ class EditorState extends State<Editor> {
 
   @override
   void dispose() {
+    _pverScrollerController.dispose();
+    _cverScrollerController.dispose();
     editingController.dispose();
     super.dispose();
   }
@@ -71,7 +69,7 @@ class EditorState extends State<Editor> {
         TextPosition(offset: pos),
       );
     } catch (e) {
-      throw Exception("code_editor : placeCursor(int pos), pos is not valid.");
+      throw Exception("");
     }
   }
 
@@ -92,19 +90,21 @@ class EditorState extends State<Editor> {
     editingController = TextEditingController(text: code);
     newValue = code;
 
-    Text showFilename(String name, bool isSelected) {
-      return Text(
-        name,
-        style: TextStyle(
-          fontFamily: "monospace",
-          letterSpacing: 1.0,
-          fontWeight: FontWeight.normal,
-          fontSize: opt?.fontSizeOfFilename,
-          color: isSelected
-              ? opt?.editorFilenameColor
-              : opt?.editorFilenameColor.withOpacity(0.5),
-        ),
-      );
+    Container showFilename(String name, bool isSelected) {
+      return Container(
+          margin: const EdgeInsets.only(right: 20),
+          child: Text(
+            name,
+            style: TextStyle(
+              fontFamily: "monospace",
+              letterSpacing: 1.0,
+              fontWeight: FontWeight.bold,
+              fontSize: opt?.fontSizeOfFilename,
+              color: isSelected
+                  ? opt?.editorFilenameColor
+                  : opt?.editorFilenameColor.withOpacity(0.5),
+            ),
+          ));
     }
 
     Container buildNavbar() {
@@ -117,6 +117,7 @@ class EditorState extends State<Editor> {
               bottom: BorderSide(color: opt?.editorBorderColor ?? Colors.blue)),
         ),
         child: ListView.builder(
+          controller: ScrollController(),
           padding: const EdgeInsets.only(left: 15),
           itemCount: model.numberOfFiles,
           scrollDirection: Axis.horizontal,
@@ -144,6 +145,8 @@ class EditorState extends State<Editor> {
 
     SingleChildScrollView buildEditableText() {
       return SingleChildScrollView(
+        controller: _pverScrollerController,
+        scrollDirection: Axis.vertical,
         child: Container(
           padding: const EdgeInsets.only(
             right: 10,
@@ -182,8 +185,9 @@ class EditorState extends State<Editor> {
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               elevation: 0,
-              primary: model.isEditing ? Colors.black :Colors.white,
-              padding: const EdgeInsets.symmetric(vertical: 18.0 , horizontal: 30.0),
+              primary: model.isEditing ? Colors.black : Colors.white,
+              padding:
+                  const EdgeInsets.symmetric(vertical: 18.0, horizontal: 30.0),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -195,7 +199,7 @@ class EditorState extends State<Editor> {
                 fontSize: 14.0,
                 fontFamily: "monospace",
                 fontWeight: FontWeight.bold,
-                color:  model.isEditing ? Colors.white :Colors.black,
+                color: model.isEditing ? Colors.white : Colors.black,
               ),
             ),
           ),
@@ -258,11 +262,7 @@ class EditorState extends State<Editor> {
       return Container(
         height: 50,
         width: double.infinity,
-        decoration: BoxDecoration(
-          color: opt?.editorColor,
-          border: Border(
-              bottom: BorderSide(color: opt?.editorBorderColor ?? Colors.blue)),
-        ),
+        decoration: BoxDecoration(color: opt?.editorColor),
         child: ListView.builder(
           padding: const EdgeInsets.all(10.0),
           itemCount: toolButtons.length,
@@ -336,8 +336,12 @@ class EditorState extends State<Editor> {
                   height: opt?.heightOfContainer,
                   color: opt?.editorColor,
                   child: SingleChildScrollView(
+                    controller: _cverScrollerController,
+                    scrollDirection: Axis.vertical,
                     child: Padding(
-                      padding: opt?.padding ?? const EdgeInsets.symmetric(horizontal: 18.0, vertical: 15.0),
+                      padding: opt?.padding ??
+                          const EdgeInsets.symmetric(
+                              horizontal: 18.0, vertical: 15.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
@@ -347,7 +351,6 @@ class EditorState extends State<Editor> {
                             theme: opt?.theme ?? githubTheme,
                             tabSize: opt?.tabSize ?? 4,
                             textStyle: TextStyle(
-                              fontFamily: opt?.fontFamily,
                               letterSpacing: opt?.letterSpacing,
                               fontSize: opt?.fontSize,
                               height: opt?.lineHeight, // line-height

@@ -1,6 +1,6 @@
+import 'package:codegensystem/utils/editor/editorFile.dart';
+import 'package:codegensystem/utils/editor/editorStyle.dart';
 import 'package:flutter/cupertino.dart';
-import 'editorFile.dart';
-import 'editorStyle.dart';
 
 class EditorModel extends ChangeNotifier {
   late int _currentPositionInFiles;
@@ -52,7 +52,6 @@ class EditorModel extends ChangeNotifier {
 
   void updateCodeOfIndex(int index, String? newCode) {
     allFiles[index].code = newCode;
-    // this.allFiles[index].setCode = newCode;
   }
 
   void notify() => notifyListeners();

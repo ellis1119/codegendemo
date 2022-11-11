@@ -37,88 +37,181 @@ class Demo4State extends State<Demo4> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: const Text(
-          '菜单三',
-          style: TextStyle(
-              fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black),
+        appBar: AppBar(
+          elevation: 0,
+          title: const Text(
+            '菜单三',
+            style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
         ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
-      backgroundColor: Colors.transparent,
-      body: Container(
-          margin: EdgeInsets.symmetric(
-              horizontal: width * 0.005, vertical: height * 0.04),
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                flex: 1,
-                child: Card(
-                    elevation: 1,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    clipBehavior: Clip.antiAlias,
-                    semanticContainer: false,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 20.0),
-                      child: ListTile(
-                          title: const Text(
-                            "输入配置",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black87,
-                              fontWeight: FontWeight.bold,
-                            ),
+        backgroundColor: Colors.transparent,
+        body: Container(
+            margin: EdgeInsets.symmetric(
+                horizontal: width * 0.005, vertical: height * 0.04),
+            child: Scrollbar(
+                child: SingleChildScrollView(
+                    controller: _verScrollerController,
+                    scrollDirection: Axis.vertical,
+                    child: Column(children: <Widget>[
+                      if (width > 1000)
+                        Container(
+                          margin: EdgeInsets.symmetric(vertical: height * 0.02),
+                          child: Flex(
+                            direction: Axis.horizontal,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                    margin: const EdgeInsets.only(right: 6.0),
+                                    child: Card(
+                                        elevation: 1,
+                                        shape: const RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(10.0),
+                                          ),
+                                        ),
+                                        clipBehavior: Clip.antiAlias,
+                                        semanticContainer: false,
+                                        child: Container(
+                                          height: 1000.0,
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15.0, vertical: 20.0),
+                                          child: ListTile(
+                                              title: const Text(
+                                                "输入配置",
+                                                style: TextStyle(
+                                                  fontSize: 18,
+                                                  color: Colors.black87,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              subtitle: Center(
+                                                child: Container(
+                                                  margin: const EdgeInsets
+                                                          .symmetric(
+                                                      vertical: 10.0),
+                                                  child: const InputConfig(),
+                                                ),
+                                              )),
+                                        ))),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  margin: const EdgeInsets.only(left: 6.0),
+                                  child: Card(
+                                      elevation: 1,
+                                      shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0),
+                                        ),
+                                      ),
+                                      clipBehavior: Clip.antiAlias,
+                                      semanticContainer: false,
+                                      child: Container(
+                                        height: 1000.0,
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15.0, vertical: 20.0),
+                                        child: ListTile(
+                                            title: const Text(
+                                              "生成结果",
+                                              style: TextStyle(
+                                                fontSize: 18,
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            subtitle: Center(
+                                              child: Container(
+                                                margin:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 10.0),
+                                                child: const StatementOutput(),
+                                              ),
+                                            )),
+                                      )),
+                                ),
+                              )
+                            ],
                           ),
-                          subtitle: Center(
-                            child: Container(
-                              margin:
-                                  const EdgeInsets.symmetric(vertical: 10.0),
-                              child: const InputConfig(),
+                        ),
+                      if (width <= 1000)
+                        Wrap(
+                          direction: Axis.horizontal,
+                          children: <Widget>[
+                            Container(
+                              margin: const EdgeInsets.only(bottom: 8.0),
+                              child: Card(
+                                  elevation: 1,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10.0),
+                                    ),
+                                  ),
+                                  clipBehavior: Clip.antiAlias,
+                                  semanticContainer: false,
+                                  child: Container(
+                                    height: 1000.0,
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 15.0, vertical: 20.0),
+                                    child: ListTile(
+                                        title: const Text(
+                                          "输入配置",
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black87,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        subtitle: Center(
+                                          child: Container(
+                                            margin: const EdgeInsets.symmetric(
+                                                vertical: 10.0),
+                                            child: const InputConfig(),
+                                          ),
+                                        )),
+                                  )),
                             ),
-                          )),
-                    )),
-              ),
-              Expanded(
-                flex: 1,
-                child: Card(
-                    elevation: 1,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    clipBehavior: Clip.antiAlias,
-                    semanticContainer: false,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 20.0),
-                      child: ListTile(
-                          title: const Text(
-                            "生成结果",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black87,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          subtitle: Center(
-                            child: Container(
-                              margin:
-                                  const EdgeInsets.symmetric(vertical: 10.0),
-                              child: const StatementOutput(),
-                            ),
-                          )),
-                    )),
-              ),
-            ],
-          )),
-    );
+                            Container(
+                                margin: const EdgeInsets.only(bottom: 8.0),
+                                child: Card(
+                                    elevation: 1,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0),
+                                      ),
+                                    ),
+                                    clipBehavior: Clip.antiAlias,
+                                    semanticContainer: false,
+                                    child: Container(
+                                      height: 1000.0,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 15.0, vertical: 20.0),
+                                      child: ListTile(
+                                          title: const Text(
+                                            "生成结果",
+                                            style: TextStyle(
+                                              fontSize: 18,
+                                              color: Colors.black87,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          subtitle: Center(
+                                            child: Container(
+                                              margin:
+                                                  const EdgeInsets.symmetric(
+                                                      vertical: 10.0),
+                                              child: const StatementOutput(),
+                                            ),
+                                          )),
+                                    ))),
+                          ],
+                        ),
+                    ])))));
   }
 }

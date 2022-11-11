@@ -1,6 +1,5 @@
+import 'package:codegensystem/utils/editor/editorTheme.dart';
 import 'package:flutter/material.dart';
-
-import 'editorTheme.dart';
 
 class EditorStyle {
   final EdgeInsets padding;
@@ -8,8 +7,6 @@ class EditorStyle {
   final double heightOfContainer;
 
   final Map<String, TextStyle> theme;
-
-  final String fontFamily;
 
   final double? letterSpacing;
 
@@ -33,13 +30,10 @@ class EditorStyle {
 
   final TextStyle textStyleOfTextField;
 
-  final Color editButtonBackgroundColor;
-
-  final Color editButtonTextColor;
-
   final String editButtonName;
 
   final ToolbarOptions toolbarOptions;
+
   final bool placeCursorAtTheEndOnEdit;
 
   static const Color defaultColorEditor = Colors.black;
@@ -53,7 +47,6 @@ class EditorStyle {
           const EdgeInsets.symmetric(horizontal: 18.0, vertical: 15.0),
       this.heightOfContainer = 800,
       this.theme = myTheme,
-      this.fontFamily = "monospace",
       this.letterSpacing = 1.25,
       this.fontSize = 16,
       this.lineHeight = 1.5,
@@ -63,8 +56,6 @@ class EditorStyle {
       this.editorFilenameColor = defaultColorFileName,
       this.editorToolButtonColor = defaultToolButtonColor,
       this.editorToolButtonTextColor = Colors.white,
-      this.editButtonBackgroundColor = defaultEditBackgroundColor,
-      this.editButtonTextColor = Colors.black,
       this.editButtonName = "编辑",
       this.fontSizeOfFilename,
       this.textStyleOfTextField = const TextStyle(
