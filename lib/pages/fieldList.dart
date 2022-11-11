@@ -18,9 +18,18 @@ class InputConfigState extends State<FieldList> {
 
   int _counter = 0;
 
-  void _incrementCounter() {
+  final List<String> _fieldArr = [];
+
+  void add() {
     setState(() {
       _counter++;
+      _fieldArr.add((_counter).toString());
+    });
+  }
+
+  void remove(String i) {
+    setState(() {
+      _fieldArr.remove(i);
     });
   }
 
@@ -79,7 +88,7 @@ class InputConfigState extends State<FieldList> {
                             flex: 1,
                             child: Column(
                               children: [
-                                for (var i = 0; i < _counter; i++)
+                                for (var i in _fieldArr)
                                   Container(
                                     margin: const EdgeInsets.symmetric(
                                         horizontal: 10.0, vertical: 8.0),
@@ -109,7 +118,8 @@ class InputConfigState extends State<FieldList> {
                                                                 field = value;
                                                               });
                                                             },
-                                                            labelText: "字段名",
+                                                            labelText:
+                                                                "字段名（还未完善）",
                                                             errorText:
                                                                 fieldError,
                                                             textInputAction:
@@ -128,9 +138,9 @@ class InputConfigState extends State<FieldList> {
                                                                     horizontal:
                                                                         10.0),
                                                             child: ToolButton(
-                                                              text: "保存",
-                                                              onPressed: submit,
-                                                            ),
+                                                                text: "保存",
+                                                                onPressed: () =>
+                                                                    {print(i)}),
                                                           )),
                                                       Expanded(
                                                         flex: 1,
@@ -142,7 +152,8 @@ class InputConfigState extends State<FieldList> {
                                                                       10.0),
                                                           child: ToolButton(
                                                             text: "删除",
-                                                            onPressed: submit,
+                                                            onPressed: () =>
+                                                                {remove(i)},
                                                           ),
                                                         ),
                                                       ),
@@ -151,7 +162,7 @@ class InputConfigState extends State<FieldList> {
                                         ],
                                       ),
                                       bottomCardWidget: const Text(
-                                        'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+                                        '输入框还未完善',
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 12,
@@ -184,7 +195,7 @@ class InputConfigState extends State<FieldList> {
                                   vertical: screenHeight * 0.01),
                               child: IncButton(
                                 text: "新增字段",
-                                onPressed: _incrementCounter,
+                                onPressed: add,
                               ),
                             ),
                           ),
