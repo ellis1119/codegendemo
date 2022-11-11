@@ -1,9 +1,10 @@
+import 'package:codegensystem/pages/demo2.dart';
+import 'package:codegensystem/pages/demo3.dart';
+import 'package:codegensystem/pages/demo4.dart';
+import 'package:codegensystem/utils/bar.dart';
+import 'package:codegensystem/utils/smallBar.dart';
 import 'package:flutter/material.dart';
-import '../utils/bar.dart';
-import '../utils/smallBar.dart';
-import 'demo2.dart';
-import 'demo3.dart';
-import 'demo4.dart';
+
 
 void main() {
   runApp(const MainBar());

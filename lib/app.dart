@@ -1,5 +1,5 @@
+import 'package:codegensystem/pages/mainBar.dart';
 import 'package:flutter/material.dart';
-import './pages/mainBar.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

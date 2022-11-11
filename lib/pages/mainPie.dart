@@ -1,6 +1,7 @@
+import 'package:codegensystem/utils/indicator.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import '../utils/indicator.dart';
+
 
 class MainPie extends StatefulWidget {
   const MainPie({Key? key}) : super(key: key);

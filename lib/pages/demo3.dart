@@ -1,5 +1,5 @@
+import 'package:codegensystem/utils/mainCard.dart';
 import 'package:flutter/material.dart';
-import '../utils/mainCard.dart';
 import 'mainGraph.dart';
 import 'mainPie.dart';
 import 'mainList.dart';

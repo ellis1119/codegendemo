@@ -1,5 +1,6 @@
+import 'package:codegensystem/pages/inputConfig.dart';
+import 'package:codegensystem/pages/statementOutput.dart';
 import 'package:flutter/material.dart';
-import './inputConfig.dart';
 
 void main() {
   runApp(const Demo4());
@@ -51,12 +52,12 @@ class Demo4State extends State<Demo4> {
           margin: EdgeInsets.symmetric(
               horizontal: width * 0.005, vertical: height * 0.04),
           child: Row(
-            children:  <Widget>[
+            children: <Widget>[
               Expanded(
                 flex: 1,
-                child:Card(
+                child: Card(
                     elevation: 1,
-                    shape:  RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(10.0),
                       ),
@@ -64,10 +65,10 @@ class Demo4State extends State<Demo4> {
                     clipBehavior: Clip.antiAlias,
                     semanticContainer: false,
                     child: Container(
-                      padding:  EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 20.0),
                       child: ListTile(
-                          title:  Text(
+                          title: const Text(
                             "输入配置",
                             style: TextStyle(
                               fontSize: 18,
@@ -77,17 +78,44 @@ class Demo4State extends State<Demo4> {
                           ),
                           subtitle: Center(
                             child: Container(
-                                margin: const EdgeInsets
-                                    .symmetric(
-                                    vertical: 10.0),
-                                child:
-                                const InputConfig(),),
+                              margin:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
+                              child: const InputConfig(),
+                            ),
                           )),
                     )),
               ),
               Expanded(
                 flex: 1,
-                child: Text('123s'),
+                child: Card(
+                    elevation: 1,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    clipBehavior: Clip.antiAlias,
+                    semanticContainer: false,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 20.0),
+                      child: ListTile(
+                          title: const Text(
+                            "生成结果",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          subtitle: Center(
+                            child: Container(
+                              margin:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
+                              child: const StatementOutput(),
+                            ),
+                          )),
+                    )),
               ),
             ],
           )),

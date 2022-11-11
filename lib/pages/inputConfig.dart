@@ -290,8 +290,8 @@ class ImpButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            Color.fromRGBO(6, 190, 182, 1),
-            Color.fromRGBO(72, 177, 191, 1)
+            Color.fromRGBO(66, 66, 74, 1.0),
+            Color.fromRGBO(41, 50, 60, 1),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
