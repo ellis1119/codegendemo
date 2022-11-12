@@ -7,10 +7,10 @@ class FieldList extends StatefulWidget {
   const FieldList({this.onSubmitted, Key? key}) : super(key: key);
 
   @override
-  InputConfigState createState() => InputConfigState();
+  FieldListState createState() => FieldListState();
 }
 
-class InputConfigState extends State<FieldList> {
+class FieldListState extends State<FieldList> {
   late String field;
   String? fieldError;
 
