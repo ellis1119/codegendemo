@@ -59,51 +59,13 @@ class Demo4State extends State<Demo4> {
                     scrollDirection: Axis.vertical,
                     child: Column(children: <Widget>[
                       if (width > 1000)
-                        Container(
-                          margin: EdgeInsets.symmetric(vertical: height * 0.02),
-                          child: Flex(
-                            direction: Axis.horizontal,
-                            children: <Widget>[
-                              Expanded(
-                                flex: 1,
-                                child: Container(
-                                    margin: const EdgeInsets.only(right: 6.0),
-                                    child: Card(
-                                        elevation: 1,
-                                        shape: const RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(10.0),
-                                          ),
-                                        ),
-                                        clipBehavior: Clip.antiAlias,
-                                        semanticContainer: false,
-                                        child: Container(
-                                          height: 1000.0,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0, vertical: 20.0),
-                                          child: ListTile(
-                                              title: const Text(
-                                                "输入配置",
-                                                style: TextStyle(
-                                                  fontSize: 18,
-                                                  color: Colors.black87,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                              subtitle: Center(
-                                                child: Container(
-                                                  margin: const EdgeInsets
-                                                          .symmetric(
-                                                      vertical: 10.0),
-                                                  child: const InputConfig(),
-                                                ),
-                                              )),
-                                        ))),
-                              ),
-                              Expanded(
-                                flex: 1,
-                                child: Container(
-                                  margin: const EdgeInsets.only(left: 6.0),
+                        Flex(
+                          direction: Axis.horizontal,
+                          children: <Widget>[
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                  margin: const EdgeInsets.only(right: 6.0),
                                   child: Card(
                                       elevation: 1,
                                       shape: const RoundedRectangleBorder(
@@ -119,7 +81,7 @@ class Demo4State extends State<Demo4> {
                                             horizontal: 15.0, vertical: 20.0),
                                         child: ListTile(
                                             title: const Text(
-                                              "生成结果",
+                                              "输入配置",
                                               style: TextStyle(
                                                 fontSize: 18,
                                                 color: Colors.black87,
@@ -128,17 +90,52 @@ class Demo4State extends State<Demo4> {
                                             ),
                                             subtitle: Center(
                                               child: Container(
-                                                margin:
-                                                    const EdgeInsets.symmetric(
-                                                        vertical: 10.0),
-                                                child: const StatementOutput(),
+                                                margin: const EdgeInsets
+                                                        .symmetric(
+                                                    vertical: 10.0),
+                                                child: const InputConfig(),
                                               ),
                                             )),
-                                      )),
-                                ),
-                              )
-                            ],
-                          ),
+                                      ))),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                margin: const EdgeInsets.only(left: 6.0),
+                                child: Card(
+                                    elevation: 1,
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(10.0),
+                                      ),
+                                    ),
+                                    clipBehavior: Clip.antiAlias,
+                                    semanticContainer: false,
+                                    child: Container(
+                                      height: 1000.0,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 15.0, vertical: 20.0),
+                                      child: ListTile(
+                                          title: const Text(
+                                            "生成结果",
+                                            style: TextStyle(
+                                              fontSize: 18,
+                                              color: Colors.black87,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          subtitle: Center(
+                                            child: Container(
+                                              margin:
+                                                  const EdgeInsets.symmetric(
+                                                      vertical: 10.0),
+                                              child: const StatementOutput(),
+                                            ),
+                                          )),
+                                    )),
+                              ),
+                            )
+                          ],
                         ),
                       if (width <= 1000)
                         Wrap(

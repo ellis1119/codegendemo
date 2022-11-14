@@ -328,8 +328,8 @@ class IncButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            Color.fromRGBO(66, 66, 74, 0.9),
-            Color.fromRGBO(41, 50, 60, 0.9),
+            Color.fromRGBO(66, 66, 74, 0.85),
+            Color.fromRGBO(41, 50, 60, 0.85),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
