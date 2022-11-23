@@ -102,35 +102,66 @@ class FieldListState extends State<FieldList> {
                                                       Expanded(
                                                         flex: 5,
                                                         child: Container(
-                                                          padding:
-                                                              const EdgeInsets
-                                                                      .symmetric(
-                                                                  horizontal:
-                                                                      10,
-                                                                  vertical: 5),
-                                                          child: InputField(
-                                                            onChanged: (value) {
-                                                              field = value;
-                                                              setState(() {
-                                                                _fieldArr
-                                                                    .setRange(
-                                                                        index,
-                                                                        index +
-                                                                            1,
-                                                                        [
-                                                                      field
-                                                                    ]);
-                                                              });
-                                                            },
-                                                            labelText: "字段名",
-                                                            errorText:
-                                                                fieldError,
-                                                            textInputAction:
-                                                                TextInputAction
-                                                                    .next,
-                                                            autoFocus: true,
-                                                          ),
-                                                        ),
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .symmetric(
+                                                                    horizontal:
+                                                                        10,
+                                                                    vertical:
+                                                                        5),
+                                                            child: Column(
+                                                                children: <
+                                                                    Widget>[
+                                                                  if (_fieldStatus[
+                                                                          index] ==
+                                                                      0)
+                                                                    InputField(
+                                                                      onChanged:
+                                                                          (value) {
+                                                                        field =
+                                                                            value;
+                                                                        setState(
+                                                                            () {
+                                                                          _fieldArr.setRange(
+                                                                              index,
+                                                                              index + 1,
+                                                                              [
+                                                                                field
+                                                                              ]);
+                                                                        });
+                                                                      },
+                                                                      labelText:
+                                                                          "字段名",
+                                                                      errorText:
+                                                                          fieldError,
+                                                                      textInputAction:
+                                                                          TextInputAction
+                                                                              .next,
+                                                                      autoFocus:
+                                                                          true,
+                                                                    ),
+                                                                  if (_fieldStatus[
+                                                                          index] ==
+                                                                      1)
+                                                                    Container(
+                                                                      margin: const EdgeInsets
+                                                                              .only(
+                                                                          top:
+                                                                              20.0,
+                                                                          left:
+                                                                              10.0),
+                                                                      child:
+                                                                          Text(
+                                                                        '字段名：${_fieldArr[index]}',
+                                                                        style: const TextStyle(
+                                                                            fontSize:
+                                                                                15.0,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                            letterSpacing: 1.8),
+                                                                      ),
+                                                                    )
+                                                                ])),
                                                       ),
                                                       Expanded(
                                                           flex: 1,
@@ -226,7 +257,10 @@ class FieldListState extends State<FieldList> {
                                                                               index] ==
                                                                           1
                                                                       ? () => {
-                                                                            remove(index)
+                                                                            setState(() {
+                                                                              remove(index);
+                                                                            })
+                                                                            //   remove(index)
                                                                           }
                                                                       : () =>
                                                                           {},
@@ -350,6 +384,7 @@ class IncButton extends StatelessWidget {
 }
 
 /*
+
 class FormButton extends StatelessWidget {
   final String text;
   final Function? onPressed;
