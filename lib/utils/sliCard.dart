@@ -13,7 +13,7 @@ class SliCard extends StatefulWidget {
     Key? key,
     this.width = 200,
     this.topCardHeight = 100,
-    this.bottomCardHeight = 100,
+    this.bottomCardHeight = 140,
     this.borderRadius = 20,
     required this.topCardWidget,
     required this.bottomCardWidget,
@@ -150,13 +150,13 @@ class SliCardState extends State<SliCard> with TickerProviderStateMixin {
           Column(
             children: <Widget>[
               SizedBox(
-                height: ((widget.topCardHeight - 2 * 30 / 4) > 0)
-                    ? (widget.topCardHeight - 2 * 30 / 4)
+                height: ((widget.topCardHeight - 2 * 5 / 4) > 0)
+                    ? (widget.topCardHeight - 2 * 5 / 4)
                     : 0,
               ),
               Container(
-                height: 30,
-                width: 50,
+                height: 25,
+                width: 45,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
