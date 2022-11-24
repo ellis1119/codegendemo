@@ -284,33 +284,22 @@ class ImpButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [
-            Color.fromRGBO(66, 66, 74, 0.9),
-            Color.fromRGBO(41, 50, 60, 0.9),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+    return ElevatedButton(
+      onPressed: onPressed as void Function()?,
+      style: ElevatedButton.styleFrom(
+        side: const BorderSide(
+            width: 0.6, color: Colors.grey, style: BorderStyle.solid),
+        elevation: 0,
+        primary: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 18.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
         ),
-        borderRadius: BorderRadius.circular(5),
       ),
-      child: ElevatedButton(
-        onPressed: onPressed as void Function()?,
-        style: ElevatedButton.styleFrom(
-          elevation: 0,
-          primary: Colors.transparent,
-          padding: const EdgeInsets.symmetric(vertical: 18.0),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(
-              fontSize: 13, color: Colors.white, fontWeight: FontWeight.bold),
-        ),
+      child: Text(
+        text,
+        style: const TextStyle(
+            fontSize: 13, color: Colors.black87, fontWeight: FontWeight.bold),
       ),
     );
   }

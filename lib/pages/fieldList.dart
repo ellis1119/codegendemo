@@ -359,14 +359,11 @@ class IncButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
+    return ElevatedButton(
       onPressed: onPressed as void Function()?,
-      style: OutlinedButton.styleFrom(
+      style: ElevatedButton.styleFrom(
         side: const BorderSide(
-          width: 0.6,
-          color: Colors.grey,
-          style: BorderStyle.solid,
-        ),
+            width: 0.6, color: Colors.grey, style: BorderStyle.solid),
         elevation: 0,
         primary: Colors.white,
         padding: const EdgeInsets.symmetric(vertical: 18.0),

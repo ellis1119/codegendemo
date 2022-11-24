@@ -1,6 +1,7 @@
 import 'package:codegensystem/pages/demo2.dart';
 import 'package:codegensystem/pages/demo3.dart';
 import 'package:codegensystem/pages/demo4.dart';
+import 'package:codegensystem/pages/demo5.dart';
 import 'package:codegensystem/utils/bar.dart';
 import 'package:codegensystem/utils/smallBar.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +25,9 @@ class MainBarState extends State<MainBar> {
     const Demo3(),
     const Demo2(),
     const Demo4(),
-    const Demo3(),
-    const Demo3(),
-    const Demo3()
+    const Demo5(),
+    const Demo5(),
+    const Demo5(),
   ];
 
   @override
