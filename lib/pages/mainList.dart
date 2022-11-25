@@ -82,7 +82,7 @@ List listData = [
   {
     "id": 1,
     "name": "John",
-    "head": "images/photo.jpg",
+    "head": "images/ava5.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -90,7 +90,7 @@ List listData = [
   {
     "id": 2,
     "name": "Will",
-    "head": "images/photo.jpg",
+    "head": "images/ava3.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -98,7 +98,7 @@ List listData = [
   {
     "id": 3,
     "name": "Beth",
-    "head": "images/photo.jpg",
+    "head": "images/ava5.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -106,7 +106,7 @@ List listData = [
   {
     "id": 4,
     "name": "Miranda",
-    "head": "images/photo.jpg",
+    "head": "images/ava2.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -114,7 +114,7 @@ List listData = [
   {
     "id": 5,
     "name": "Mike",
-    "head": "images/photo.jpg",
+    "head": "images/ava2.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -122,7 +122,7 @@ List listData = [
   {
     "id": 4,
     "name": "Miranda",
-    "head": "images/photo.jpg",
+    "head": "images/ava1.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -130,7 +130,7 @@ List listData = [
   {
     "id": 5,
     "name": "Mike",
-    "head": "images/photo.jpg",
+    "head": "images/ava4.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."
@@ -138,7 +138,7 @@ List listData = [
   {
     "id": 4,
     "name": "Miranda",
-    "head": "images/photo.jpg",
+    "head": "images/ava4.png",
     "date": "2022-07-18",
     "body":
         "Little Sam (on phone): My son is having high fever and he won’t be able to come to school today."

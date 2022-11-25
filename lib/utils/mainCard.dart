@@ -30,7 +30,7 @@ class MainCard extends StatelessWidget {
           for (final item in items)
             Container(
               padding:
-                  const EdgeInsets.symmetric(vertical: 18.0, horizontal: 20.0),
+                  const EdgeInsets.symmetric(vertical: 18.0, horizontal: 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

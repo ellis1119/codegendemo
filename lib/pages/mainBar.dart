@@ -233,5 +233,5 @@ class MainBarState extends State<MainBar> {
 }
 
 List myInfor = [
-  {'name': 'Ellis', 'photo': 'images/photo.jpg', 'date': '234'}
+  {'name': 'Ellis', 'photo': 'images/ava5.png', 'date': '234'}
 ];

@@ -1,9 +1,9 @@
+import 'package:codegensystem/utils/displayCard.dart';
 import 'package:codegensystem/utils/mainCard.dart';
 import 'package:flutter/material.dart';
 import 'mainGraph.dart';
 import 'mainPie.dart';
 import 'mainList.dart';
-import 'mainSmallTable.dart';
 
 void main() {
   runApp(const Demo3());
@@ -73,15 +73,17 @@ class Demo3State extends State<Demo3> {
                                   child: MainCard(
                                     items: [
                                       MainCardItem(
-                                        title: '卡片标题一',
-                                        data: 520,
-                                        desc: '测试内容一',
-                                        icon: const Icon(
-                                          Icons.home_filled,
-                                          size: 40.0,
-                                          color: Colors.redAccent,
-                                        ),
-                                      ),
+                                          title: '卡片标题一',
+                                          data: 520,
+                                          desc: '测试内容一',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ava1.png',
+                                              height: 65,
+                                              width: 65,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
                                     ],
                                   ),
                                 ),
@@ -92,15 +94,17 @@ class Demo3State extends State<Demo3> {
                                   child: MainCard(
                                     items: [
                                       MainCardItem(
-                                        title: '卡片标题二',
-                                        data: 11,
-                                        desc: '测试内容二',
-                                        icon: const Icon(
-                                          Icons.cloud,
-                                          size: 40.0,
-                                          color: Colors.orangeAccent,
-                                        ),
-                                      ),
+                                          title: '卡片标题二',
+                                          data: 11,
+                                          desc: '测试内容二',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ava2.png',
+                                              height: 65,
+                                              width: 65,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
                                     ],
                                   ),
                                 ),
@@ -111,15 +115,17 @@ class Demo3State extends State<Demo3> {
                                   child: MainCard(
                                     items: [
                                       MainCardItem(
-                                        title: '卡片标题三',
-                                        data: 58,
-                                        desc: '测试内容三',
-                                        icon: const Icon(
-                                          Icons.import_contacts_sharp,
-                                          size: 40.0,
-                                          color: Colors.blueAccent,
-                                        ),
-                                      ),
+                                          title: '卡片标题三',
+                                          data: 58,
+                                          desc: '测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ava3.png',
+                                              height: 65,
+                                              width: 65,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
                                     ],
                                   ),
                                 ),
@@ -128,15 +134,17 @@ class Demo3State extends State<Demo3> {
                                 child: MainCard(
                                   items: [
                                     MainCardItem(
-                                      title: '卡片标题四',
-                                      data: 666,
-                                      desc: '测试内容四',
-                                      icon: const Icon(
-                                        Icons.chat,
-                                        size: 40.0,
-                                        color: Colors.cyan,
-                                      ),
-                                    ),
+                                        title: '卡片标题四',
+                                        data: 666,
+                                        desc: '测试内容四',
+                                        icon: ClipOval(
+                                          child: Image.asset(
+                                            'images/ava4.png',
+                                            height: 65,
+                                            width: 65,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        )),
                                   ],
                                 ),
                               )
@@ -152,15 +160,17 @@ class Demo3State extends State<Demo3> {
                               child: MainCard(
                                 items: [
                                   MainCardItem(
-                                    title: '卡片标题一',
-                                    data: 520,
-                                    desc: '测试内容一',
-                                    icon: const Icon(
-                                      Icons.home_filled,
-                                      size: 40.0,
-                                      color: Colors.redAccent,
-                                    ),
-                                  ),
+                                      title: '卡片标题一',
+                                      data: 520,
+                                      desc: '测试内容一',
+                                      icon: ClipOval(
+                                        child: Image.asset(
+                                          'images/ava1.png',
+                                          height: 65,
+                                          width: 65,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )),
                                 ],
                               ),
                             ),
@@ -169,15 +179,17 @@ class Demo3State extends State<Demo3> {
                               child: MainCard(
                                 items: [
                                   MainCardItem(
-                                    title: '卡片标题二',
-                                    data: 11,
-                                    desc: '测试内容二',
-                                    icon: const Icon(
-                                      Icons.cloud,
-                                      size: 40.0,
-                                      color: Colors.orangeAccent,
-                                    ),
-                                  ),
+                                      title: '卡片标题二',
+                                      data: 11,
+                                      desc: '测试内容二',
+                                      icon: ClipOval(
+                                        child: Image.asset(
+                                          'images/ava2.png',
+                                          height: 65,
+                                          width: 65,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )),
                                 ],
                               ),
                             ),
@@ -186,30 +198,34 @@ class Demo3State extends State<Demo3> {
                               child: MainCard(
                                 items: [
                                   MainCardItem(
-                                    title: '卡片标题三',
-                                    data: 58,
-                                    desc: '测试内容三',
-                                    icon: const Icon(
-                                      Icons.import_contacts_sharp,
-                                      size: 40.0,
-                                      color: Colors.blueAccent,
-                                    ),
-                                  ),
+                                      title: '卡片标题三',
+                                      data: 58,
+                                      desc: '测试内容三',
+                                      icon: ClipOval(
+                                        child: Image.asset(
+                                          'images/ava3.png',
+                                          height: 65,
+                                          width: 65,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )),
                                 ],
                               ),
                             ),
                             MainCard(
                               items: [
                                 MainCardItem(
-                                  title: '卡片标题四',
-                                  data: 666,
-                                  desc: '测试内容四',
-                                  icon: const Icon(
-                                    Icons.chat,
-                                    size: 40.0,
-                                    color: Colors.cyan,
-                                  ),
-                                ),
+                                    title: '卡片标题四',
+                                    data: 666,
+                                    desc: '测试内容四',
+                                    icon: ClipOval(
+                                      child: Image.asset(
+                                        'images/ava4.png',
+                                        height: 65,
+                                        width: 65,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
                               ],
                             )
                           ],
@@ -355,7 +371,7 @@ class Demo3State extends State<Demo3> {
                         ),
                       if (width > 1000)
                         SizedBox(
-                          height: 600,
+                          height: 650,
                           child: Flex(
                             direction: Axis.horizontal,
                             children: [
@@ -398,50 +414,140 @@ class Demo3State extends State<Demo3> {
                               Expanded(
                                 flex: 1,
                                 child: Container(
-                                  margin: const EdgeInsets.only(left: 6.0),
-                                  child: Card(
-                                      elevation: 1,
-                                      shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0),
+                                    margin: const EdgeInsets.only(left: 6.0),
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: DisplayCard(
+                                            items: [
+                                              DisplayCardItem(
+                                                  title: '卡片标题三',
+                                                  desc:
+                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  icon: ClipOval(
+                                                    child: Image.asset(
+                                                      'images/ca1.png',
+                                                      height: 80,
+                                                      width: 80,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      clipBehavior: Clip.antiAlias,
-                                      semanticContainer: false,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 15.0, vertical: 20.0),
-                                        child: ListTile(
-                                            title: const Text(
-                                              "表格一",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            subtitle: Center(
-                                              child: Container(
-                                                  margin: const EdgeInsets
-                                                          .symmetric(
-                                                      vertical: 10.0),
-                                                  child:
-                                                      const MainSmallTable()),
-                                            )),
-                                      )),
-                                ),
+                                        Expanded(
+                                          child: DisplayCard(
+                                            items: [
+                                              DisplayCardItem(
+                                                  title: '卡片标题三',
+                                                  desc:
+                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  icon: ClipOval(
+                                                    child: Image.asset(
+                                                      'images/ca2.png',
+                                                      height: 80,
+                                                      width: 80,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )),
+                                            ],
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: DisplayCard(
+                                            items: [
+                                              DisplayCardItem(
+                                                  title: '卡片标题三',
+                                                  desc:
+                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  icon: ClipOval(
+                                                    child: Image.asset(
+                                                      'images/ca3.png',
+                                                      height: 80,
+                                                      width: 80,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                    margin: const EdgeInsets.only(left: 6.0),
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: DisplayCard(
+                                            items: [
+                                              DisplayCardItem(
+                                                  title: '卡片标题三',
+                                                  desc:
+                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  icon: ClipOval(
+                                                    child: Image.asset(
+                                                      'images/ca4.png',
+                                                      height: 80,
+                                                      width: 80,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )),
+                                            ],
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: DisplayCard(
+                                            items: [
+                                              DisplayCardItem(
+                                                  title: '卡片标题三',
+                                                  desc:
+                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  icon: ClipOval(
+                                                    child: Image.asset(
+                                                      'images/ca5.png',
+                                                      height: 80,
+                                                      width: 80,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )),
+                                            ],
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: DisplayCard(
+                                            items: [
+                                              DisplayCardItem(
+                                                  title: '卡片标题三',
+                                                  desc:
+                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  icon: ClipOval(
+                                                    child: Image.asset(
+                                                      'images/ca6.png',
+                                                      height: 80,
+                                                      width: 80,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    )),
                               ),
                             ],
                           ),
                         ),
                       if (width <= 1000)
                         SizedBox(
-                          height: 1300,
+                          height: 2000,
                           child: Flex(
                             direction: Axis.vertical,
                             children: [
                               Expanded(
-                                flex: 1,
+                                flex: 3,
                                 child: Container(
                                   margin: const EdgeInsets.only(bottom: 8.0),
                                   child: Card(
@@ -479,37 +585,127 @@ class Demo3State extends State<Demo3> {
                               Expanded(
                                 flex: 1,
                                 child: Container(
-                                  margin: const EdgeInsets.only(top: 8.0),
-                                  child: Card(
-                                      elevation: 1,
-                                      shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(10.0),
-                                        ),
-                                      ),
-                                      clipBehavior: Clip.antiAlias,
-                                      semanticContainer: false,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 15.0, vertical: 20.0),
-                                        child: ListTile(
-                                            title: const Text(
-                                              "表格一",
-                                              style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                              ),
+                                  margin: const EdgeInsets.only(bottom: 8.0),
+                                  child: DisplayCard(
+                                    items: [
+                                      DisplayCardItem(
+                                          title: '卡片标题三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ca1.png',
+                                              height: 80,
+                                              width: 80,
+                                              fit: BoxFit.cover,
                                             ),
-                                            subtitle: Center(
-                                              child: Container(
-                                                  margin: const EdgeInsets
-                                                          .symmetric(
-                                                      vertical: 10.0),
-                                                  child:
-                                                      const MainSmallTable()),
-                                            )),
-                                      )),
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  margin: const EdgeInsets.only(bottom: 8.0),
+                                  child: DisplayCard(
+                                    items: [
+                                      DisplayCardItem(
+                                          title: '卡片标题三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ca2.png',
+                                              height: 80,
+                                              width: 80,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  margin: const EdgeInsets.only(bottom: 8.0),
+                                  child: DisplayCard(
+                                    items: [
+                                      DisplayCardItem(
+                                          title: '卡片标题三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ca3.png',
+                                              height: 80,
+                                              width: 80,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  margin: const EdgeInsets.only(bottom: 8.0),
+                                  child: DisplayCard(
+                                    items: [
+                                      DisplayCardItem(
+                                          title: '卡片标题三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ca4.png',
+                                              height: 80,
+                                              width: 80,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  margin: const EdgeInsets.only(bottom: 8.0),
+                                  child: DisplayCard(
+                                    items: [
+                                      DisplayCardItem(
+                                          title: '卡片标题三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ca5.png',
+                                              height: 80,
+                                              width: 80,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  margin: const EdgeInsets.only(bottom: 8.0),
+                                  child: DisplayCard(
+                                    items: [
+                                      DisplayCardItem(
+                                          title: '卡片标题三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          icon: ClipOval(
+                                            child: Image.asset(
+                                              'images/ca6.png',
+                                              height: 80,
+                                              width: 80,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          )),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
