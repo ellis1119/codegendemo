@@ -1,4 +1,5 @@
 import 'package:codegensystem/pages/fieldList.dart';
+import 'package:codegensystem/pages/inputAlert.dart';
 import 'package:flutter/material.dart';
 
 class InputConfig extends StatefulWidget {
@@ -11,9 +12,14 @@ class InputConfig extends StatefulWidget {
   InputConfigState createState() => InputConfigState();
 }
 
-class InputConfigState extends State<InputConfig> {
+class InputConfigState extends State<InputConfig>
+    with SingleTickerProviderStateMixin {
   late String table, library, notes, number;
   String? tableError, libraryError, notesError, numberError;
+  late Animation<double> animation;
+  late AnimationController controller;
+  late AnimationStatus animationStatus = AnimationStatus.reverse;
+  late double animationValue = 0;
 
   Function(String? table, String? library, String? notes, String? number)?
       get onSubmitted => widget.onSubmitted;
@@ -30,6 +36,19 @@ class InputConfigState extends State<InputConfig> {
     libraryError = null;
     notesError = null;
     numberError = null;
+    controller =
+        AnimationController(duration: const Duration(seconds: 2), vsync: this);
+    animation = Tween<double>(begin: 0, end: 300).animate(controller)
+      ..addListener(() {
+        setState(() {
+          animationValue = animation.value;
+        });
+      })
+      ..addStatusListener((AnimationStatus status) {
+        setState(() {
+          animationStatus = status;
+        });
+      });
   }
 
   void resetErrorText() {
@@ -102,7 +121,20 @@ class InputConfigState extends State<InputConfig> {
                                             vertical: screenHeight * 0.01),
                                         child: ImpButton(
                                           text: "智能导入",
-                                          onPressed: submit,
+                                          onPressed: () => {
+                                            Navigator.of(context).push(PageRouteBuilder(
+                                                opaque: false,
+                                                pageBuilder: (BuildContext
+                                                            context,
+                                                        Animation<double>
+                                                            animation,
+                                                        Animation
+                                                            secondaryAnimation) =>
+                                                    FadeTransition(
+                                                        opacity: animation,
+                                                        child:
+                                                            const InputAlert()))),
+                                          },
                                         ),
                                       ),
                                     ),
@@ -114,7 +146,20 @@ class InputConfigState extends State<InputConfig> {
                                             vertical: screenHeight * 0.01),
                                         child: ImpButton(
                                           text: "导入表",
-                                          onPressed: submit,
+                                          onPressed: () => {
+                                            Navigator.of(context).push(PageRouteBuilder(
+                                                opaque: false,
+                                                pageBuilder: (BuildContext
+                                                            context,
+                                                        Animation<double>
+                                                            animation,
+                                                        Animation
+                                                            secondaryAnimation) =>
+                                                    FadeTransition(
+                                                        opacity: animation,
+                                                        child:
+                                                            const InputAlert()))),
+                                          },
                                         ),
                                       ),
                                     ),
@@ -126,7 +171,20 @@ class InputConfigState extends State<InputConfig> {
                                             vertical: screenHeight * 0.01),
                                         child: ImpButton(
                                           text: "导入配置",
-                                          onPressed: submit,
+                                          onPressed: () => {
+                                            Navigator.of(context).push(PageRouteBuilder(
+                                                opaque: false,
+                                                pageBuilder: (BuildContext
+                                                            context,
+                                                        Animation<double>
+                                                            animation,
+                                                        Animation
+                                                            secondaryAnimation) =>
+                                                    FadeTransition(
+                                                        opacity: animation,
+                                                        child:
+                                                            const InputAlert()))),
+                                          },
                                         ),
                                       ),
                                     ),
@@ -138,7 +196,20 @@ class InputConfigState extends State<InputConfig> {
                                             vertical: screenHeight * 0.01),
                                         child: ImpButton(
                                           text: "导入SQL",
-                                          onPressed: submit,
+                                          onPressed: () => {
+                                            Navigator.of(context).push(PageRouteBuilder(
+                                                opaque: false,
+                                                pageBuilder: (BuildContext
+                                                            context,
+                                                        Animation<double>
+                                                            animation,
+                                                        Animation
+                                                            secondaryAnimation) =>
+                                                    FadeTransition(
+                                                        opacity: animation,
+                                                        child:
+                                                            const InputAlert()))),
+                                          },
                                         ),
                                       ),
                                     ),

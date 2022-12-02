@@ -98,7 +98,7 @@ class MainBarState extends State<MainBar> {
                           ElevatedButton(
                             onPressed: () => {},
                             style: ElevatedButton.styleFrom(
-                                primary: Colors.cyan,
+                                primary: Colors.lightBlue,
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 48.0, vertical: 16.0)),
                             child: const Text(

@@ -97,7 +97,7 @@ class Demo2State extends State<Demo2> {
                                     const EdgeInsets.symmetric(
                                         horizontal: 29, vertical: 15)),
                                 backgroundColor:
-                                    MaterialStateProperty.all(Colors.cyan),
+                                    MaterialStateProperty.all(Colors.lightBlue),
                                 shape: MaterialStateProperty.all(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20.0),
