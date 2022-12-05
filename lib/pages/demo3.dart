@@ -211,8 +211,10 @@ class Demo3State extends State<Demo3> {
                                       )),
                                 ],
                               ),
-                            ),
-                            MainCard(
+                            ), Container(
+                              margin: const EdgeInsets.only(bottom: 8.0),
+                              child:
+                              MainCard(
                               items: [
                                 MainCardItem(
                                     title: '卡片标题四',
@@ -227,7 +229,7 @@ class Demo3State extends State<Demo3> {
                                       ),
                                     )),
                               ],
-                            )
+                            ))
                           ],
                         ),
                       if (width > 1000)
@@ -250,7 +252,7 @@ class Demo3State extends State<Demo3> {
                                         clipBehavior: Clip.antiAlias,
                                         semanticContainer: false,
                                         child: Container(
-                                          height: 600.0,
+                                          height: 520.0,
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 15.0, vertical: 20.0),
                                           child: const ListTile(
@@ -280,7 +282,7 @@ class Demo3State extends State<Demo3> {
                                       clipBehavior: Clip.antiAlias,
                                       semanticContainer: false,
                                       child: Container(
-                                        height: 600.0,
+                                        height: 520.0,
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 15.0, vertical: 20.0),
                                         child: const ListTile(
@@ -319,7 +321,7 @@ class Demo3State extends State<Demo3> {
                                   clipBehavior: Clip.antiAlias,
                                   semanticContainer: false,
                                   child: Container(
-                                    height: 600.0,
+                                    height: 520.0,
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 15.0, vertical: 20.0),
                                     child: const ListTile(
@@ -347,7 +349,7 @@ class Demo3State extends State<Demo3> {
                                     clipBehavior: Clip.antiAlias,
                                     semanticContainer: false,
                                     child: Container(
-                                      height: 600.0,
+                                      height: 520.0,
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 15.0, vertical: 20.0),
                                       child: ListTile(
@@ -371,7 +373,7 @@ class Demo3State extends State<Demo3> {
                         ),
                       if (width > 1000)
                         SizedBox(
-                          height: 650,
+                          height: 640,
                           child: Flex(
                             direction: Axis.horizontal,
                             children: [

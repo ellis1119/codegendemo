@@ -116,7 +116,6 @@ class MainGraph extends StatelessWidget {
         colors: [
           Colors.blue,
           Colors.lightBlue,
-          Colors.cyan,
         ],
         begin: Alignment.bottomCenter,
         end: Alignment.topCenter,
@@ -127,7 +126,7 @@ class MainGraph extends StatelessWidget {
           x: 0,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 8,
               gradient: _barsGradient,
             )
@@ -138,7 +137,7 @@ class MainGraph extends StatelessWidget {
           x: 1,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 10,
               gradient: _barsGradient,
             )
@@ -149,7 +148,7 @@ class MainGraph extends StatelessWidget {
           x: 2,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 14,
               gradient: _barsGradient,
             )
@@ -160,7 +159,7 @@ class MainGraph extends StatelessWidget {
           x: 3,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 15,
               gradient: _barsGradient,
             )
@@ -171,7 +170,7 @@ class MainGraph extends StatelessWidget {
           x: 3,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 13,
               gradient: _barsGradient,
             )
@@ -182,7 +181,7 @@ class MainGraph extends StatelessWidget {
           x: 3,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 10,
               gradient: _barsGradient,
             )
@@ -193,7 +192,7 @@ class MainGraph extends StatelessWidget {
           x: 4,
           barRods: [
             BarChartRodData(
-              width: 19,
+              width: 16,
               toY: 10,
               gradient: _barsGradient,
             )

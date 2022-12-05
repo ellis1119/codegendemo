@@ -1,4 +1,6 @@
+import 'package:codegensystem/pages/loginPage.dart';
 import 'package:codegensystem/pages/mainBar.dart';
+import 'package:codegensystem/pages/registerPage.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,16 +14,12 @@ class MyApp extends StatelessWidget {
         MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'codeGenTest',
-          initialRoute: '/',
+          initialRoute: '/login',
           routes: {
-            '/': (context) => const MainBar(),
-            '/home': (context) => const MainBar(),
-            '/chatPage': (context) => const MainBar(),
             '/login': (context) => const MainBar(),
-            '/register': (context) => const MainBar(),
-            '/sendMoments': (context) => const MainBar(),
-            '/infoPage': (context) => const MainBar(),
-            '/friendDetPage': (context) => const MainBar(),
+            '/home': (context) => const MainBar(),
+            '/login': (context) => const LoginPage(),
+            '/register': (context) => const RegisterPage(),
 
           },
         )

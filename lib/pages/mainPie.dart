@@ -94,12 +94,15 @@ class MainPieState extends State {
                 child: Column(
                   children: const <Widget>[
                     Indicator(
-                      color: Colors.blueAccent,
+                      color: Colors.lightBlue,
                       text: 'First',
                       isSquare: true,
                     ),
+                    SizedBox(
+                      height: 4,
+                    ),
                     Indicator(
-                      color: Colors.cyan,
+                      color: Colors.orangeAccent,
                       text: 'Second',
                       isSquare: true,
                     ),
@@ -107,7 +110,7 @@ class MainPieState extends State {
                       height: 4,
                     ),
                     Indicator(
-                      color: Colors.orange,
+                      color: Colors.cyan,
                       text: 'Third',
                       isSquare: true,
                     ),
@@ -115,7 +118,7 @@ class MainPieState extends State {
                       height: 4,
                     ),
                     Indicator(
-                      color: Colors.red,
+                      color: Colors.redAccent,
                       text: 'Fourth',
                       isSquare: true,
                     ),
@@ -131,12 +134,12 @@ class MainPieState extends State {
   List<PieChartSectionData> showingSections() {
     return List.generate(4, (i) {
       final isTouched = i == touchedIndex;
-      final fontSize = isTouched ? 25.0 : 16.0;
-      final radius = isTouched ? 60.0 : 50.0;
+      final fontSize = isTouched ? 20.0 : 15.0;
+      final radius = isTouched ? 50.0 : 40.0;
       switch (i) {
         case 0:
           return PieChartSectionData(
-            color: Colors.blueAccent,
+            color: Colors.lightBlue,
             value: 40,
             title: '40%',
             radius: radius,
@@ -148,7 +151,7 @@ class MainPieState extends State {
           );
         case 1:
           return PieChartSectionData(
-            color: Colors.cyan,
+            color: Colors.orangeAccent,
             value: 30,
             title: '30%',
             radius: radius,
@@ -160,7 +163,7 @@ class MainPieState extends State {
           );
         case 2:
           return PieChartSectionData(
-            color: Colors.orange,
+            color: Colors.cyan,
             value: 15,
             title: '15%',
             radius: radius,
@@ -172,7 +175,7 @@ class MainPieState extends State {
           );
         case 3:
           return PieChartSectionData(
-            color: Colors.red,
+            color: Colors.redAccent,
             value: 15,
             title: '15%',
             radius: radius,

@@ -34,7 +34,7 @@ class MainBarState extends State<MainBar> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(249, 250, 252, 1),
+        backgroundColor: const Color.fromRGBO(247, 249, 252, 1),
         body: Row(children: <Widget>[
           if (width > 1000)
             Container(
@@ -96,7 +96,7 @@ class MainBarState extends State<MainBar> {
                       child: Column(
                         children: [
                           ElevatedButton(
-                            onPressed: () => {},
+                            onPressed: () => {Navigator.pushReplacementNamed(context, '/login')},
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.lightBlue,
                                 padding: const EdgeInsets.symmetric(
