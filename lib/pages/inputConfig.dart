@@ -1,4 +1,5 @@
 import 'package:codegensystem/pages/fieldList.dart';
+import 'package:codegensystem/pages/importAlert.dart';
 import 'package:codegensystem/pages/inputAlert.dart';
 import 'package:flutter/material.dart';
 
@@ -183,7 +184,7 @@ class InputConfigState extends State<InputConfig>
                                                     FadeTransition(
                                                         opacity: animation,
                                                         child:
-                                                            const InputAlert()))),
+                                                            const ImportAlert()))),
                                           },
                                         ),
                                       ),

@@ -8,9 +8,6 @@ class InputAlert extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Modal 弹窗'),
-      // ),
       backgroundColor: Colors.black.withOpacity(0.65),
       body: Container(
           padding: EdgeInsets.symmetric(
@@ -29,9 +26,8 @@ class InputAlert extends StatelessWidget {
                       "表信息列表",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: Colors.lightBlue,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                           letterSpacing: 1.6),
                     )),
                   ],
