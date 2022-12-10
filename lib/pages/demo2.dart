@@ -62,7 +62,7 @@ class Demo2State extends State<Demo2> {
         appBar: AppBar(
           elevation: 0,
           title: const Text(
-            '菜单二',
+            '表格页',
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold , color: Colors.black),
           ),
           centerTitle: true,

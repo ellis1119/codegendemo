@@ -40,7 +40,7 @@ class Demo4State extends State<Demo4> {
         appBar: AppBar(
           elevation: 0,
           title: const Text(
-            '菜单三',
+            '配置页',
             style: TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
