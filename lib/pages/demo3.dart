@@ -211,25 +211,25 @@ class Demo3State extends State<Demo3> {
                                       )),
                                 ],
                               ),
-                            ), Container(
-                              margin: const EdgeInsets.only(bottom: 8.0),
-                              child:
-                              MainCard(
-                              items: [
-                                MainCardItem(
-                                    title: '卡片标题四',
-                                    data: 666,
-                                    desc: '测试内容四',
-                                    icon: ClipOval(
-                                      child: Image.asset(
-                                        'images/ava4.png',
-                                        height: 65,
-                                        width: 65,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    )),
-                              ],
-                            ))
+                            ),
+                            Container(
+                                margin: const EdgeInsets.only(bottom: 8.0),
+                                child: MainCard(
+                                  items: [
+                                    MainCardItem(
+                                        title: '卡片标题四',
+                                        data: 666,
+                                        desc: '测试内容四',
+                                        icon: ClipOval(
+                                          child: Image.asset(
+                                            'images/ava4.png',
+                                            height: 65,
+                                            width: 65,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        )),
+                                  ],
+                                ))
                           ],
                         ),
                       if (width > 1000)
@@ -373,12 +373,12 @@ class Demo3State extends State<Demo3> {
                         ),
                       if (width > 1000)
                         SizedBox(
-                          height: 640,
+                          height: 600,
                           child: Flex(
                             direction: Axis.horizontal,
                             children: [
                               Expanded(
-                                flex: 1,
+                                flex: 3,
                                 child: Container(
                                   margin: const EdgeInsets.only(right: 6.0),
                                   child: Card(
@@ -414,7 +414,7 @@ class Demo3State extends State<Demo3> {
                                 ),
                               ),
                               Expanded(
-                                flex: 1,
+                                flex: 2,
                                 child: Container(
                                     margin: const EdgeInsets.only(left: 6.0),
                                     child: Column(
@@ -424,13 +424,12 @@ class Demo3State extends State<Demo3> {
                                             items: [
                                               DisplayCardItem(
                                                   title: '卡片标题三',
-                                                  desc:
-                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  desc: '测试内容三测试内容三测试内容三测试内容三',
                                                   icon: ClipOval(
                                                     child: Image.asset(
                                                       'images/ca1.png',
-                                                      height: 80,
-                                                      width: 80,
+                                                      height: 70,
+                                                      width: 70,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   )),
@@ -442,13 +441,12 @@ class Demo3State extends State<Demo3> {
                                             items: [
                                               DisplayCardItem(
                                                   title: '卡片标题三',
-                                                  desc:
-                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  desc: '测试内容三测试内容三测试内容三测试内容三',
                                                   icon: ClipOval(
                                                     child: Image.asset(
                                                       'images/ca2.png',
-                                                      height: 80,
-                                                      width: 80,
+                                                      height: 70,
+                                                      width: 70,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   )),
@@ -460,13 +458,12 @@ class Demo3State extends State<Demo3> {
                                             items: [
                                               DisplayCardItem(
                                                   title: '卡片标题三',
-                                                  desc:
-                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  desc: '测试内容三测试内容三测试内容三测试内容三',
                                                   icon: ClipOval(
                                                     child: Image.asset(
                                                       'images/ca3.png',
-                                                      height: 80,
-                                                      width: 80,
+                                                      height: 70,
+                                                      width: 70,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   )),
@@ -477,7 +474,7 @@ class Demo3State extends State<Demo3> {
                                     )),
                               ),
                               Expanded(
-                                flex: 1,
+                                flex: 2,
                                 child: Container(
                                     margin: const EdgeInsets.only(left: 6.0),
                                     child: Column(
@@ -487,13 +484,12 @@ class Demo3State extends State<Demo3> {
                                             items: [
                                               DisplayCardItem(
                                                   title: '卡片标题三',
-                                                  desc:
-                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  desc: '测试内容三测试内容三测试内容三测试内容三',
                                                   icon: ClipOval(
                                                     child: Image.asset(
                                                       'images/ca4.png',
-                                                      height: 80,
-                                                      width: 80,
+                                                      height: 70,
+                                                      width: 70,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   )),
@@ -505,13 +501,12 @@ class Demo3State extends State<Demo3> {
                                             items: [
                                               DisplayCardItem(
                                                   title: '卡片标题三',
-                                                  desc:
-                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  desc: '测试内容三测试内容三测试内容三测试内容三',
                                                   icon: ClipOval(
                                                     child: Image.asset(
                                                       'images/ca5.png',
-                                                      height: 80,
-                                                      width: 80,
+                                                      height: 70,
+                                                      width: 70,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   )),
@@ -523,13 +518,12 @@ class Demo3State extends State<Demo3> {
                                             items: [
                                               DisplayCardItem(
                                                   title: '卡片标题三',
-                                                  desc:
-                                                      '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                                  desc: '测试内容三测试内容三测试内容三测试内容三',
                                                   icon: ClipOval(
                                                     child: Image.asset(
                                                       'images/ca6.png',
-                                                      height: 80,
-                                                      width: 80,
+                                                      height: 70,
+                                                      width: 70,
                                                       fit: BoxFit.cover,
                                                     ),
                                                   )),
@@ -592,7 +586,7 @@ class Demo3State extends State<Demo3> {
                                     items: [
                                       DisplayCardItem(
                                           title: '卡片标题三',
-                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三',
                                           icon: ClipOval(
                                             child: Image.asset(
                                               'images/ca1.png',
@@ -613,7 +607,7 @@ class Demo3State extends State<Demo3> {
                                     items: [
                                       DisplayCardItem(
                                           title: '卡片标题三',
-                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三',
                                           icon: ClipOval(
                                             child: Image.asset(
                                               'images/ca2.png',
@@ -634,7 +628,7 @@ class Demo3State extends State<Demo3> {
                                     items: [
                                       DisplayCardItem(
                                           title: '卡片标题三',
-                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三',
                                           icon: ClipOval(
                                             child: Image.asset(
                                               'images/ca3.png',
@@ -655,7 +649,7 @@ class Demo3State extends State<Demo3> {
                                     items: [
                                       DisplayCardItem(
                                           title: '卡片标题三',
-                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三',
                                           icon: ClipOval(
                                             child: Image.asset(
                                               'images/ca4.png',
@@ -676,7 +670,7 @@ class Demo3State extends State<Demo3> {
                                     items: [
                                       DisplayCardItem(
                                           title: '卡片标题三',
-                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三',
                                           icon: ClipOval(
                                             child: Image.asset(
                                               'images/ca5.png',
@@ -697,12 +691,12 @@ class Demo3State extends State<Demo3> {
                                     items: [
                                       DisplayCardItem(
                                           title: '卡片标题三',
-                                          desc: '测试内容三测试内容三测试内容三测试内容三测试内容三',
+                                          desc: '测试内容三测试内容三测试内容三测试内容三',
                                           icon: ClipOval(
                                             child: Image.asset(
                                               'images/ca6.png',
-                                              height: 80,
-                                              width: 80,
+                                              height: 60,
+                                              width: 60,
                                               fit: BoxFit.cover,
                                             ),
                                           )),

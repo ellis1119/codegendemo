@@ -134,23 +134,23 @@ class MainBarState extends State<MainBar> {
                     onTap: (i) => setState(() => _currentIndex = i),
                     items: [
                       BarItem(
-                        icon: const Icon(Icons.message),
-                        title: const Text("菜单一"),
+                        icon: const Icon(Icons.data_thresholding),
+                        title: const Text("主页"),
                       ),
                       BarItem(
-                        icon: const Icon(Icons.people),
-                        title: const Text("菜单二"),
+                        icon: const Icon(Icons.table_view),
+                        title: const Text("表格页"),
                       ),
                       BarItem(
                         icon: const Icon(Icons.local_library),
-                        title: const Text("菜单三"),
+                        title: const Text("配置页"),
                       ),
                       BarItem(
                         icon: const Icon(Icons.public),
                         title: const Text("菜单四"),
                       ),
                       BarItem(
-                        icon: const Icon(Icons.local_library),
+                        icon: const Icon(Icons.public),
                         title: const Text("菜单五"),
                       ),
                       BarItem(

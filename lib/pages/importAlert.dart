@@ -30,7 +30,7 @@ class ImportAlertState extends State<ImportAlert> {
               margin: EdgeInsets.symmetric(
                   vertical: 8.0, horizontal: screenWidth * 0.025),
               width: 500,
-              height: 250,
+              height: 280,
               child: TextField(
                 style: const TextStyle(fontSize: 16.0),
                 keyboardType: TextInputType.multiline,

@@ -1,5 +1,7 @@
 import 'package:codegensystem/pages/fieldList.dart';
 import 'package:codegensystem/pages/importAlert.dart';
+import 'package:codegensystem/pages/importAuto.dart';
+import 'package:codegensystem/pages/importSql.dart';
 import 'package:codegensystem/pages/inputAlert.dart';
 import 'package:flutter/material.dart';
 
@@ -121,6 +123,31 @@ class InputConfigState extends State<InputConfig>
                                             horizontal: screenWidth * 0.005,
                                             vertical: screenHeight * 0.01),
                                         child: ImpButton(
+                                          text: "导入表",
+                                          onPressed: () => {
+                                            Navigator.of(context).push(PageRouteBuilder(
+                                                opaque: false,
+                                                pageBuilder: (BuildContext
+                                                context,
+                                                    Animation<double>
+                                                    animation,
+                                                    Animation
+                                                    secondaryAnimation) =>
+                                                    FadeTransition(
+                                                        opacity: animation,
+                                                        child:
+                                                        const InputAlert()))),
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: screenWidth * 0.005,
+                                            vertical: screenHeight * 0.01),
+                                        child: ImpButton(
                                           text: "智能导入",
                                           onPressed: () => {
                                             Navigator.of(context).push(PageRouteBuilder(
@@ -134,32 +161,7 @@ class InputConfigState extends State<InputConfig>
                                                     FadeTransition(
                                                         opacity: animation,
                                                         child:
-                                                            const InputAlert()))),
-                                          },
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: Container(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: screenWidth * 0.005,
-                                            vertical: screenHeight * 0.01),
-                                        child: ImpButton(
-                                          text: "导入表",
-                                          onPressed: () => {
-                                            Navigator.of(context).push(PageRouteBuilder(
-                                                opaque: false,
-                                                pageBuilder: (BuildContext
-                                                            context,
-                                                        Animation<double>
-                                                            animation,
-                                                        Animation
-                                                            secondaryAnimation) =>
-                                                    FadeTransition(
-                                                        opacity: animation,
-                                                        child:
-                                                            const InputAlert()))),
+                                                            const ImportAuto()))),
                                           },
                                         ),
                                       ),
@@ -209,7 +211,7 @@ class InputConfigState extends State<InputConfig>
                                                     FadeTransition(
                                                         opacity: animation,
                                                         child:
-                                                            const InputAlert()))),
+                                                            const ImportSql()))),
                                           },
                                         ),
                                       ),
@@ -340,13 +342,64 @@ class InputConfigState extends State<InputConfig>
                                 ))),
                       ],
                     ),
-                    const FieldList()
+                    const FieldList(),
+                    Row(
+                      children: <Widget>[
+                        Flexible(
+                            child: Container(
+                                margin: const EdgeInsets.only(
+                                    left: 6.0, right: 6.0, bottom: 30.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    Expanded(
+                                      flex: 1,
+                                      child: SubButton(
+                                        text: "一键生成",
+                                        onPressed: submit,
+                                      ),
+                                    ),
+                                  ],
+                                ))),
+                      ],
+                    ),
                   ],
                 ),
               ]);
             }));
   }
 }
+
+
+class SubButton extends StatelessWidget {
+  final String text;
+  final Function? onPressed;
+
+  const SubButton({this.text = "", this.onPressed, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed as void Function()?,
+      style: ElevatedButton.styleFrom(
+        side: const BorderSide(
+            width: 0.6, color: Colors.grey, style: BorderStyle.solid),
+        elevation: 0,
+        primary: Colors.lightBlue,
+        padding: const EdgeInsets.symmetric(vertical: 18.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+            fontSize: 13, color: Colors.white, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+}
+
+
 
 class ImpButton extends StatelessWidget {
   final String text;

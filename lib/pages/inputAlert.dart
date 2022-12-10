@@ -13,7 +13,7 @@ class InputAlert extends StatelessWidget {
           padding: EdgeInsets.symmetric(
               vertical: 10.0, horizontal: screenWidth * 0.05),
           color: Colors.white,
-          height: screenHeight * 0.65,
+          height: screenHeight * 0.6,
           width: double.infinity,
           child: Column(
             children: [
@@ -62,8 +62,7 @@ class InputAlert extends StatelessWidget {
                                 child: Text(
                                   '表名：${listData[index]['name']}',
                                   style: const TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.black54,
+                                      color: Colors.black,
                                       fontSize: 14,
                                       letterSpacing: 1.1),
                                 ),
@@ -75,8 +74,7 @@ class InputAlert extends StatelessWidget {
                                 child: Text(
                                   '字段：${listData[index]['field']}',
                                   style: const TextStyle(
-                                      color: Colors.black54,
-                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black,
                                       fontSize: 14,
                                       letterSpacing: 1.1),
                                 ),
@@ -89,7 +87,7 @@ class InputAlert extends StatelessWidget {
                                     color: Colors.lightBlue,
                                     size: 30.0,
                                   ),
-                                  tooltip: 'click IconButton',
+                                  tooltip: '导入',
                                   onPressed: () {},
                                 ),
                               )

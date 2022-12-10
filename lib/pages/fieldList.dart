@@ -23,18 +23,7 @@ class FieldListState extends State<FieldList> {
 
   Function(String? field)? get onSubmitted => widget.onSubmitted;
 
-  final List<Map<dynamic, dynamic>> _fieldArr = [
-    {
-      'field': '',
-      'type': '',
-      'def': '',
-      'notes': '',
-      'empty': false,
-      'pri': false,
-      'auto': false,
-      'status': 0
-    }
-  ];
+  final List<Map<dynamic, dynamic>> _fieldArr = [];
 
   void add() {
     setState(() {
@@ -712,7 +701,7 @@ class FieldListState extends State<FieldList> {
             Flexible(
                 child: Container(
                     margin: const EdgeInsets.only(
-                        left: 6.0, right: 6.0, bottom: 60.0),
+                        left: 6.0, right: 6.0, bottom: 15.0),
                     child: Row(
                       children: <Widget>[
                         Expanded(
